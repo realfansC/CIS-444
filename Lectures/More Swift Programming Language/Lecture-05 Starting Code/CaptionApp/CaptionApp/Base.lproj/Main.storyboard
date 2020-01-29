@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x9j-GE-X89">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cap It-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CaptionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fish" translatesAutoresizingMaskIntoConstraints="NO" id="VNI-EV-2o4">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWk-gp-8QT">
+                                <rect key="frame" x="20" y="652.5" width="374" height="45.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NWk-gp-8QT" firstAttribute="centerX" secondItem="VNI-EV-2o4" secondAttribute="centerX" id="4g1-SV-5CE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NWk-gp-8QT" secondAttribute="trailing" constant="20" id="7zx-gT-ovZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VNI-EV-2o4" secondAttribute="trailing" id="AmY-g7-eeE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VNI-EV-2o4" secondAttribute="bottom" id="IzT-lu-1cT"/>
+                            <constraint firstItem="NWk-gp-8QT" firstAttribute="centerY" secondItem="VNI-EV-2o4" secondAttribute="centerY" constant="200" id="TMp-Tr-cUf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="VNI-EV-2o4" secondAttribute="leading" id="We2-6A-iLy"/>
+                            <constraint firstItem="NWk-gp-8QT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pUd-gt-4nW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="VNI-EV-2o4" secondAttribute="top" id="xl7-Nd-fpe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cap It" id="EAP-Gb-AVH">
+                        <barButtonItem key="rightBarButtonItem" title="Refresh" id="moz-vR-6xF">
+                            <connections>
+                                <action selector="handleRefreshAction:" destination="BYZ-38-t0r" id="oR1-zE-jwn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="captionLabel" destination="NWk-gp-8QT" id="zvH-YJ-Raw"/>
+                        <outlet property="imageView" destination="VNI-EV-2o4" id="ha5-oJ-USf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="135.9375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0hL-v8-4Bh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x9j-GE-X89" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SR8-bn-SPk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hZF-WC-qyD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x15-EQ-F9j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="135.9375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Fish" width="700" height="525"/>
+    </resources>
+</document>

@@ -34,26 +34,16 @@ Example: Think of an API like a menu in a restaurant. The menu provides a list o
 ---
 ## What is an API?
 
-Example: Think of an API like a menu in a restaurant. The menu provides a list of dishes you can order, along with a description of each dish. When you specify what menu items you want, the restaurant’s kitchen does the work and provides you with some finished dishes. You don’t know exactly how the restaurant prepares that food, and you don’t really need to.
-
-
----
-## What is an API?
-
-API is like a menu, it's a bunch of operations that a controller can use without knowing the nitty gritty details behind the scenes.
+It's a bunch of operations that a controller can use without knowing the nitty gritty details behind the scenes.
 
 
 ---
 ## What is an API
 
-Say I want to give my user in our app (CaptionThat) the ability to upload a photo from their phone's photo library to our app. How would we do that? 
-
-Steps: 
+Say I want to give my user in our app (CaptionThat) the ability to upload a photo from their phone's photo library to our app.
 
 ---
 ## What is an API
-
-Say we want to give our user the ability to upload a photo from their phone's photo library. How would we do that? 
 
 Feature from user's perspective 
 1. I open CaptionThat App,
@@ -61,37 +51,63 @@ Feature from user's perspective
 3. Still in the app, a view pops up with my photo library available for me to see
 4. I select a photo from my library
 5. The photo library view disappears
-6. And the photo I selected is in CaptionThat with a funny caption attached to it
+6. And the photo I selected is in CaptionThat UIImageView
 
 ---
-## What is an API
+...looks like a lot of work. But it's not, because there's an API for that
 
-Say we want to give our user the ability to upload a photo from their phone's photo library. How would we do that? 
-
-Feature from user's perspective 
-1. I open CaptionThat App,
-2. I tap a button that says, "Add Photo"
-3. Still in the app, a view pops up with my photo library available for me to see
-4. I select a photo from my library
-5. The photo library view disappears
-6. And the photo I selected is in CaptionThat with a funny caption attached to it
-
-...sounds like a lot of work. But it's not, because there's an API for that
-
+![left](/Users/rebeccaslatkin/Desktop/Screenshot 2019-09-13 at 10.47.41 AM.png)
 
 ---
 ## What is an API?
 
-Quick Demo:
+Quickly:
 UIImagePickerController
 
 Using  `UIImagePickerController` API, the user has the ability to choose an image from the photo library, take a photo using out-of-box-controls from the UIImagePickerController API, and then display an image in the view after choosing.
 
 ---
-### What is an API
 
+```swift 
+        self.pickerController = UIImagePickerController()
+        pickerController?.delegate = self
+        pickerController?.allowsEditing = true
+        pickerController?.sourceType = .photoLibrary
+```
+
+![right](/Users/rebeccaslatkin/CIS-444/Lectures/L7 Swift Programming Language/Assets/Caption-That-Camera.png)
 
 ---
+
+```swift
+public protocol UIImagePickerControllerDelegate : NSObjectProtocol
+
+func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
+
+func imagePickerControllerDidCancel(_ picker: UIImagePickerController)
+```
+---
+
+```swift
+extension ViewController: UIImagePickerControllerDelegate {
+    
+    public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.generate(with: nil)
+    }
+
+    public func imagePickerController(_ picker: UIImagePickerController,
+                                      didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        guard let image = info[.editedImage] as? UIImage else {
+            self.generate(with: nil)
+            return
+        }
+        self.generate(with: image)
+    }
+}
+```
+
+--- 
+
 # Data Structures
 
 4 Essential Data Structure-building Concepts in Swift:
@@ -100,8 +116,6 @@ Using  `UIImagePickerController` API, the user has the ability to choose an imag
 	3️⃣ `enum`
 	4️⃣ `**protocol**`
 
----
-# struct
 
 --- 
 # struct
@@ -817,7 +831,7 @@ protocol Equatable {
 ---
 # Protocols 
 
-💥 Let's go make `Caption` and `Picture` `Hashable`
+💥 Part of your homework this week is to make `Caption` and `Picture` `Hashable`
 💥 As a bonus we'll be able to compare `Caption`s and `Picture`s directly because they'll be Equatable 
 💥 This will even allow us to make `identifier` in `Caption` to be `private`, which makes a lot of sense 
 
@@ -859,7 +873,7 @@ So now Apple can create generic code that operates on a `Collection` and it will
 - Using `extension` to provide `protocol` implementation
 
 -> We said that `protocol` implementation is provided by implementing types (`struct`, `enum`, `class`)
-However, an `extension` an be used to add **default implementation** to a `protocol` 
+However, an `extension` can be used to add **default implementation** to a `protocol` 
 
 -> Since there's no storage, said implementation has to be in terms of other API in the `protocol`
 (And any `API` in any `protocol` that `protocol` inherits from, of course
@@ -1041,10 +1055,6 @@ func replaceSubrange(Range<String.Index>, with: Collection of Character)
 ```
 
 ---
-# Demo 
-
-
--- 
 # NSAttributedString
 
 - A `String` with attributes attached to each other -
@@ -1304,8 +1314,7 @@ func jump() { .. }
 - You can do this anywhere any other type is allowed
 
 ---
-# Functions as variables
-
+# Functions as variables...next week!
 
 
 

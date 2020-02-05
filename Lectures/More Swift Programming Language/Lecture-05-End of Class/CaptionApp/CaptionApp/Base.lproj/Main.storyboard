@@ -10,7 +10,7 @@
         <!--Cap It-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CaptionApp_Lecture_06" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CaptionApp_Lecture_05" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,7 +57,7 @@
         <!--Cap It-->
         <scene sceneID="xtr-JE-s5c">
             <objects>
-                <viewController id="LaT-Xx-MM5" customClass="ViewController_JSON" customModule="CaptionApp_Lecture_06" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LaT-Xx-MM5" customClass="ViewController" customModule="CaptionApp_Lecture_05" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lZn-yX-aNu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

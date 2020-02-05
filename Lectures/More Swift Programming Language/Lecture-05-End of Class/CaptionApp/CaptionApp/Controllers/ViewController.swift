@@ -1,15 +1,14 @@
 //
-//  ViewController_JSON.swift
-//  CaptionApp-Lecture-06
+//  ViewController.swift
+//  CaptionApp
 //
-//  Created by Rebecca  Slatkin on 1/29/20.
+//  Created by Rebecca  Slatkin on 1/27/20.
 //  Copyright © 2020 Syracuse University. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-class ViewController_JSON: UIViewController {
+class ViewController: UIViewController {
     
     /// The image view that displays the image
     @IBOutlet weak var imageView: UIImageView!
@@ -95,57 +94,11 @@ class ViewController_JSON: UIViewController {
         // Import quotes from local JSON file
         let fileName = "theoffice"
         do {
-            let captions = try LocalJsonService.readJSON(from: fileName) as! NSDictionary
+            let captions = try LocalJsonService.readJSON(from: fileName)
             print("captions count: \(captions.count)")
         } catch let error as NSError {
             print("Failed to \(error.localizedDescription)")
         }
-        
-        captions = [Caption(text: "I am serious. And don't call me Shirley"),
-                    Caption(text: "I'm about to do to you what Limp Bizkit did to music in the late '90s."),
-                    Caption(text: "I'm in a glass case of emotion!"),
-                    Caption(text: "I'll have what she's having."),
-                    Caption(text: "Nothing to see here, move along"),
-                    Caption(text: "I'm about to do to you what Limp Bizkit did to music in the late '90s."),
-                    Caption(text: "I'm in a glass case of emotion!"),
-                    Caption(text: "I'll have what she's having."),
-                    Caption(text: "Nothing to see here, move along"),
-                    Caption(text: "I'm about to do to you what Limp Bizkit did to music in the late '90s."),
-                    Caption(text: "I'm in a glass case of emotion!"),
-                    Caption(text: "I'll have what she's having."),
-                    Caption(text: "Nothing to see here, move along"),
-                    Caption(text: "I'm about to do to you what Limp Bizkit did to music in the late '90s."),
-                    Caption(text: "I'm in a glass case of emotion!"),
-                    Caption(text: "I'll have what she's having."),
-                    Caption(text: "Nothing to see here, move along"),
-                    Caption(text: "I'm about to do to you what Limp Bizkit did to music in the late '90s."),
-                    Caption(text: "I'm in a glass case of emotion!"),
-                    Caption(text: "I'll have what she's having."),
-                    Caption(text: "Nothing to see here, move along"),
-                    Caption(text: "I'm about to do to you what Limp Bizkit did to music in the late '90s."),
-                    Caption(text: "I'm in a glass case of emotion!"),
-                    Caption(text: "I'll have what she's having."),
-                    Caption(text: "Nothing to see here, move along"),
-                    Caption(text: "I'm about to do to you what Limp Bizkit did to music in the late '90s."),
-                    Caption(text: "I'm in a glass case of emotion!"),
-                    Caption(text: "I'll have what she's having."),
-                    Caption(text: "Nothing to see here, move along"),
-                    Caption(text: "I'm about to do to you what Limp Bizkit did to music in the late '90s."),
-                    Caption(text: "I'm in a glass case of emotion!"),
-                    Caption(text: "I'll have what she's having."),
-                    Caption(text: "Nothing to see here, move along"),
-                    Caption(text: "I'm about to do to you what Limp Bizkit did to music in the late '90s."),
-                    Caption(text: "I'm in a glass case of emotion!"),
-                    Caption(text: "I'll have what she's having."),
-                    Caption(text: "Nothing to see here, move along"),
-                    Caption(text: "I'm about to do to you what Limp Bizkit did to music in the late '90s."),
-                    Caption(text: "I'm in a glass case of emotion!"),
-                    Caption(text: "I'll have what she's having."),
-                    Caption(text: "Nothing to see here, move along"),
-                    Caption(text: "I'm about to do to you what Limp Bizkit did to music in the late '90s."),
-                    Caption(text: "I'm in a glass case of emotion!"),
-                    Caption(text: "I'll have what she's having."),
-                    Caption(text: "Nothing to see here, move along")]
     }
     
     func generate() {
@@ -169,7 +122,7 @@ class ViewController_JSON: UIViewController {
             assertionFailure("Caption should not be nil")
             return ""
         }
-        return caption.text
+        return caption.quote
     }
     
     @IBAction func handleRefreshAction(_ sender: Any) {

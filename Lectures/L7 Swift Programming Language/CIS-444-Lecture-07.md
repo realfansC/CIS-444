@@ -85,7 +85,10 @@ Feature from user's perspective
 Quick Demo:
 UIImagePickerController
 
-Using  `UIImagePickerController` API my user the ability to choose an image from the photo library, take a photo using out-of-box-controls from the UIImagePickerController API, and then display an image in the view after choosing.
+Using  `UIImagePickerController` API, the user has the ability to choose an image from the photo library, take a photo using out-of-box-controls from the UIImagePickerController API, and then display an image in the view after choosing.
+
+---
+### What is an API
 
 
 ---
@@ -697,7 +700,7 @@ slipeAndSlide(prius)
 
 - A very important use of protocols 
 - It's a way to implement a "blind communication" between a View and its Controller
-[MISSING GRAPHIC]
+
 
 
 ---

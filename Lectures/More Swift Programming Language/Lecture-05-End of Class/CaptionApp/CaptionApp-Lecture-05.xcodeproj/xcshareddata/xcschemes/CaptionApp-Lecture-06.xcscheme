@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FB50532223DF552D00127CED"
-               BuildableName = "CaptionApp-Lecture-06.app"
-               BlueprintName = "CaptionApp-Lecture-06"
-               ReferencedContainer = "container:CaptionApp-Lecture-06.xcodeproj">
+               BuildableName = "CaptionApp-Lecture-05.app"
+               BlueprintName = "CaptionApp-Lecture-05"
+               ReferencedContainer = "container:CaptionApp-Lecture-05.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FB50533823DF552F00127CED"
-               BuildableName = "CaptionApp-Lecture-06Tests.xctest"
-               BlueprintName = "CaptionApp-Lecture-06Tests"
-               ReferencedContainer = "container:CaptionApp-Lecture-06.xcodeproj">
+               BuildableName = "CaptionApp-Lecture-05Tests.xctest"
+               BlueprintName = "CaptionApp-Lecture-05Tests"
+               ReferencedContainer = "container:CaptionApp-Lecture-05.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FB50534323DF552F00127CED"
-               BuildableName = "CaptionApp-Lecture-06UITests.xctest"
-               BlueprintName = "CaptionApp-Lecture-06UITests"
-               ReferencedContainer = "container:CaptionApp-Lecture-06.xcodeproj">
+               BuildableName = "CaptionApp-Lecture-05UITests.xctest"
+               BlueprintName = "CaptionApp-Lecture-05UITests"
+               ReferencedContainer = "container:CaptionApp-Lecture-05.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FB50532223DF552D00127CED"
-            BuildableName = "CaptionApp-Lecture-06.app"
-            BlueprintName = "CaptionApp-Lecture-06"
-            ReferencedContainer = "container:CaptionApp-Lecture-06.xcodeproj">
+            BuildableName = "CaptionApp-Lecture-05.app"
+            BlueprintName = "CaptionApp-Lecture-05"
+            ReferencedContainer = "container:CaptionApp-Lecture-05.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -82,9 +82,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FB50532223DF552D00127CED"
-            BuildableName = "CaptionApp-Lecture-06.app"
-            BlueprintName = "CaptionApp-Lecture-06"
-            ReferencedContainer = "container:CaptionApp-Lecture-06.xcodeproj">
+            BuildableName = "CaptionApp-Lecture-05.app"
+            BlueprintName = "CaptionApp-Lecture-05"
+            ReferencedContainer = "container:CaptionApp-Lecture-05.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

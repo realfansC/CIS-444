@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/rebeccaslatkin/CIS-444/Lectures/More Swift Programming Language/Lecture-06/CaptionApp/CaptionApp-Lecture-06.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

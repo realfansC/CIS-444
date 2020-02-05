@@ -15,6 +15,8 @@
 		FB50533323DF552E00127CED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB50533123DF552E00127CED /* LaunchScreen.storyboard */; };
 		FB50533E23DF552F00127CED /* CaptionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB50533D23DF552F00127CED /* CaptionAppTests.swift */; };
 		FB50534923DF552F00127CED /* CaptionAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB50534823DF552F00127CED /* CaptionAppUITests.swift */; };
+		FB57535E23DF604500ADEC0F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB57535D23DF604500ADEC0F /* Photo.swift */; };
+		FB57536023DF607400ADEC0F /* Caption.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB57535F23DF607400ADEC0F /* Caption.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FB50532323DF552D00127CED /* CaptionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaptionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB50532323DF552D00127CED /* CaptionApp-Lecture-05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CaptionApp-Lecture-05.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB50532623DF552D00127CED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB50532823DF552D00127CED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FB50532A23DF552D00127CED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,12 +45,14 @@
 		FB50532F23DF552E00127CED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB50533223DF552E00127CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB50533423DF552E00127CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB50533923DF552F00127CED /* CaptionAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaptionAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB50533923DF552F00127CED /* CaptionApp-Lecture-05Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CaptionApp-Lecture-05Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB50533D23DF552F00127CED /* CaptionAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionAppTests.swift; sourceTree = "<group>"; };
 		FB50533F23DF552F00127CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB50534423DF552F00127CED /* CaptionAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaptionAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB50534423DF552F00127CED /* CaptionApp-Lecture-05UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CaptionApp-Lecture-05UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB50534823DF552F00127CED /* CaptionAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionAppUITests.swift; sourceTree = "<group>"; };
 		FB50534A23DF552F00127CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB57535D23DF604500ADEC0F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		FB57535F23DF607400ADEC0F /* Caption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,9 +93,9 @@
 		FB50532423DF552D00127CED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FB50532323DF552D00127CED /* CaptionApp.app */,
-				FB50533923DF552F00127CED /* CaptionAppTests.xctest */,
-				FB50534423DF552F00127CED /* CaptionAppUITests.xctest */,
+				FB50532323DF552D00127CED /* CaptionApp-Lecture-05.app */,
+				FB50533923DF552F00127CED /* CaptionApp-Lecture-05Tests.xctest */,
+				FB50534423DF552F00127CED /* CaptionApp-Lecture-05UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,9 +103,11 @@
 		FB50532523DF552D00127CED /* CaptionApp */ = {
 			isa = PBXGroup;
 			children = (
+				FB57535C23DF5FE800ADEC0F /* Models */,
+				FB57535B23DF5FE400ADEC0F /* Views */,
+				FB57535A23DF5FDD00ADEC0F /* Controllers */,
 				FB50532623DF552D00127CED /* AppDelegate.swift */,
 				FB50532823DF552D00127CED /* SceneDelegate.swift */,
-				FB50532A23DF552D00127CED /* ViewController.swift */,
 				FB50532C23DF552D00127CED /* Main.storyboard */,
 				FB50532F23DF552E00127CED /* Assets.xcassets */,
 				FB50533123DF552E00127CED /* LaunchScreen.storyboard */,
@@ -128,12 +134,36 @@
 			path = CaptionAppUITests;
 			sourceTree = "<group>";
 		};
+		FB57535A23DF5FDD00ADEC0F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB50532A23DF552D00127CED /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FB57535B23DF5FE400ADEC0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FB57535C23DF5FE800ADEC0F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB57535D23DF604500ADEC0F /* Photo.swift */,
+				FB57535F23DF607400ADEC0F /* Caption.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FB50532223DF552D00127CED /* CaptionApp */ = {
+		FB50532223DF552D00127CED /* CaptionApp-Lecture-05 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB50534D23DF552F00127CED /* Build configuration list for PBXNativeTarget "CaptionApp" */;
+			buildConfigurationList = FB50534D23DF552F00127CED /* Build configuration list for PBXNativeTarget "CaptionApp-Lecture-05" */;
 			buildPhases = (
 				FB50531F23DF552D00127CED /* Sources */,
 				FB50532023DF552D00127CED /* Frameworks */,
@@ -143,14 +173,14 @@
 			);
 			dependencies = (
 			);
-			name = CaptionApp;
+			name = "CaptionApp-Lecture-05";
 			productName = CaptionApp;
-			productReference = FB50532323DF552D00127CED /* CaptionApp.app */;
+			productReference = FB50532323DF552D00127CED /* CaptionApp-Lecture-05.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FB50533823DF552F00127CED /* CaptionAppTests */ = {
+		FB50533823DF552F00127CED /* CaptionApp-Lecture-05Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB50535023DF552F00127CED /* Build configuration list for PBXNativeTarget "CaptionAppTests" */;
+			buildConfigurationList = FB50535023DF552F00127CED /* Build configuration list for PBXNativeTarget "CaptionApp-Lecture-05Tests" */;
 			buildPhases = (
 				FB50533523DF552F00127CED /* Sources */,
 				FB50533623DF552F00127CED /* Frameworks */,
@@ -161,14 +191,14 @@
 			dependencies = (
 				FB50533B23DF552F00127CED /* PBXTargetDependency */,
 			);
-			name = CaptionAppTests;
+			name = "CaptionApp-Lecture-05Tests";
 			productName = CaptionAppTests;
-			productReference = FB50533923DF552F00127CED /* CaptionAppTests.xctest */;
+			productReference = FB50533923DF552F00127CED /* CaptionApp-Lecture-05Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FB50534323DF552F00127CED /* CaptionAppUITests */ = {
+		FB50534323DF552F00127CED /* CaptionApp-Lecture-05UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB50535323DF552F00127CED /* Build configuration list for PBXNativeTarget "CaptionAppUITests" */;
+			buildConfigurationList = FB50535323DF552F00127CED /* Build configuration list for PBXNativeTarget "CaptionApp-Lecture-05UITests" */;
 			buildPhases = (
 				FB50534023DF552F00127CED /* Sources */,
 				FB50534123DF552F00127CED /* Frameworks */,
@@ -179,9 +209,9 @@
 			dependencies = (
 				FB50534623DF552F00127CED /* PBXTargetDependency */,
 			);
-			name = CaptionAppUITests;
+			name = "CaptionApp-Lecture-05UITests";
 			productName = CaptionAppUITests;
-			productReference = FB50534423DF552F00127CED /* CaptionAppUITests.xctest */;
+			productReference = FB50534423DF552F00127CED /* CaptionApp-Lecture-05UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -207,7 +237,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FB50531E23DF552D00127CED /* Build configuration list for PBXProject "CaptionApp" */;
+			buildConfigurationList = FB50531E23DF552D00127CED /* Build configuration list for PBXProject "CaptionApp-Lecture-05" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -220,9 +250,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FB50532223DF552D00127CED /* CaptionApp */,
-				FB50533823DF552F00127CED /* CaptionAppTests */,
-				FB50534323DF552F00127CED /* CaptionAppUITests */,
+				FB50532223DF552D00127CED /* CaptionApp-Lecture-05 */,
+				FB50533823DF552F00127CED /* CaptionApp-Lecture-05Tests */,
+				FB50534323DF552F00127CED /* CaptionApp-Lecture-05UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,9 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB57535E23DF604500ADEC0F /* Photo.swift in Sources */,
 				FB50532B23DF552D00127CED /* ViewController.swift in Sources */,
 				FB50532723DF552D00127CED /* AppDelegate.swift in Sources */,
 				FB50532923DF552D00127CED /* SceneDelegate.swift in Sources */,
+				FB57536023DF607400ADEC0F /* Caption.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,12 +318,12 @@
 /* Begin PBXTargetDependency section */
 		FB50533B23DF552F00127CED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FB50532223DF552D00127CED /* CaptionApp */;
+			target = FB50532223DF552D00127CED /* CaptionApp-Lecture-05 */;
 			targetProxy = FB50533A23DF552F00127CED /* PBXContainerItemProxy */;
 		};
 		FB50534623DF552F00127CED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FB50532223DF552D00127CED /* CaptionApp */;
+			target = FB50532223DF552D00127CED /* CaptionApp-Lecture-05 */;
 			targetProxy = FB50534523DF552F00127CED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -484,7 +516,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CaptionApp.app/CaptionApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CaptionApp-Lecture-05.app/CaptionApp-Lecture-05";
 			};
 			name = Debug;
 		};
@@ -506,7 +538,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CaptionApp.app/CaptionApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CaptionApp-Lecture-05.app/CaptionApp-Lecture-05";
 			};
 			name = Release;
 		};
@@ -553,7 +585,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FB50531E23DF552D00127CED /* Build configuration list for PBXProject "CaptionApp" */ = {
+		FB50531E23DF552D00127CED /* Build configuration list for PBXProject "CaptionApp-Lecture-05" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB50534B23DF552F00127CED /* Debug */,
@@ -562,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB50534D23DF552F00127CED /* Build configuration list for PBXNativeTarget "CaptionApp" */ = {
+		FB50534D23DF552F00127CED /* Build configuration list for PBXNativeTarget "CaptionApp-Lecture-05" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB50534E23DF552F00127CED /* Debug */,
@@ -571,7 +603,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB50535023DF552F00127CED /* Build configuration list for PBXNativeTarget "CaptionAppTests" */ = {
+		FB50535023DF552F00127CED /* Build configuration list for PBXNativeTarget "CaptionApp-Lecture-05Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB50535123DF552F00127CED /* Debug */,
@@ -580,7 +612,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB50535323DF552F00127CED /* Build configuration list for PBXNativeTarget "CaptionAppUITests" */ = {
+		FB50535323DF552F00127CED /* Build configuration list for PBXNativeTarget "CaptionApp-Lecture-05UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB50535423DF552F00127CED /* Debug */,

@@ -20,12 +20,3 @@ class LocalJsonService {
         return json
     }
 }
-
-/*  // Import quotes from local JSON file
-      let fileName = "theoffice"
-      do {
-          let captions = try LocalJsonService.readJSON(from: fileName) as! NSDictionary
-          print("captions count: \(captions.count)")
-      } catch let error as NSError {
-          print("Failed to \(error.localizedDescription)")
-      }*/

@@ -55,19 +55,19 @@ what it links to is also part of this week’s reading assignment._
 
 
 ### Strings and Characters
-- String literals
-- Initalizing an Empty String
+- ✅ String literals
+- ✅ Initalizing an Empty String
 - String Mutability 
 - Strings are Value Types
-- Working with Characters
+- :exclamation: Working with Characters
 - Concatenating Strings and Characters
 - String Interpolation
 - Unicode
 - Counting Characters
--  Accessing and Modifying a String
--  Substrings
-- Comparing Strings 
--  Unicode Represenations of Strings
+-  ✅ Accessing and Modifying a String
+-  ✅ Substrings
+- ✅ Comparing Strings 
+-  :exclamation: Unicode Represenations of Strings
 
 ### Collection Types 
 - Mutability of Collections
@@ -76,16 +76,16 @@ what it links to is also part of this week’s reading assignment._
 - Performing Set Operations
 
 ### Control Flow
-* For-In Loops
-* While Loops
+* ✅ For-In Loops
+* ✅ While Loops
 1. Conditional Statements:
 * Ifs
 *  Switch
 * No implicit Fallthrough
 * Interval Matching
-*  Tuples
-*  Value Bindings
-*  Where
+*  :exclamation: Tuples
+*  ✅ Value Bindings
+*  ✅ Where
 * Compound Cases
 
 2. Control Transfer Statements:
@@ -109,15 +109,15 @@ what it links to is also part of this week’s reading assignment._
 * Specifying Argument Labels
 * Omitting Argument Labels
 * Default Parameter Values
-* :no_mouth: Variadic Parameters
-* :no_mouth: In-Out Parameters
+* :no_mouth: Variadic Parameters (not in this course)
+* :no_mouth: In-Out Parameters (not in this course)
 
 3. :rotating_light: Function Types
 4. Nested Functions 
 
-### :no_mouth: Closures
+### :exclamation: Closures
 
-### :no_mouth: Enumerations
+### :exclamation: Enumerations
 
 ### Classes and Structures
 * Comparing Classes and Structures
@@ -149,7 +149,7 @@ what it links to is also part of this week’s reading assignment._
 1. Overriding
 * Accessing Superclass Methods, Properties, and Subscripts
 * ✅ Overriding Methods
-* :no_mouth: Overriding Properties
+* :exclamation: Overriding Properties
 2. Preventing Overrides
 
 ### Initalization:

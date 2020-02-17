@@ -20,13 +20,21 @@ Today:
 
 [appguide]: https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html
 
----
+----
 
+### UIApplication 
+
+![inline](https://miro.medium.com/max/1088/1*n8zDfF0RCd3keeFqAqWBGA.png)
+
+---
 ## Structure of a `UIApplication`
 
 * All iOS applications are instances of [`UIApplication`][uiapplication].
 
 * Each application has a number of events in its lifecycle (e.g. launched, went into the background, terminated).  
+
+![right 55%](https://miro.medium.com/max/1088/1*n8zDfF0RCd3keeFqAqWBGA.png)
+
 
 [uiapplication]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/
 
@@ -37,6 +45,8 @@ Today:
 * As with other classes in the UIKit framework, you control how the application will respond to these events by providing it with a [delegate][delegatepattern]. 
 
 * A `UIApplication`'s delegate must implement the [`UIApplicationDelegate`][uiapplicationdelegate] protocol.
+
+![right 55%](https://miro.medium.com/max/1088/1*n8zDfF0RCd3keeFqAqWBGA.png)
 
 [delegatepattern]: http://en.wikipedia.org/wiki/Delegation_pattern
 [uiapplicationdelegate]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplicationDelegate_Protocol/index.html
@@ -168,6 +178,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 [applifecycle]: https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/TheAppLifeCycle/TheAppLifeCycle.html#//apple_ref/doc/uid/TP40007072-CH2-SW3
 
 ----
+### Recap: Model-View-Controller in iOS 
+
+![inline](https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/Art/cocoa_mvc.gif)
+
+---
 
 ### Recap: Model-View-Controller in iOS
 
@@ -343,12 +358,15 @@ Model                     View Controller                     View
 
 There is a notion of Container View Controllers that manage the multiple view controllers and their interactions.  The most common built-in container view controller is the Navigation Controller which you saw in your first homework
 
+
 ----
 
 ### Container View Controllers
 #### Overview
 
 * Traditionally in iOS a view controller corresponded to one "screen" in the application.  
+
+
 
 ---
 ### Container View Controllers
@@ -358,7 +376,43 @@ There is a notion of Container View Controllers that manage the multiple view co
 
 * The most prominent examples of these are the [navigation controller](Navigation-Controller#) and [tab bar controller](Tab-Bar-Controller-Guide#).
 
+![right 50%](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/Art/VCPG-container-acting-as-root-view-controller_2-2_2x.png)
+
+
 [containercatalog]: https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Introduction.html
+
+---
+## Container - Navigation Controller
+
+![inline](https://docs-assets.developer.apple.com/published/83ef757907/navigation_interface_2x_8f059f7f-2e2f-4c86-8468-7402b7b3cfe0.png)
+
+---
+## Container - Navigation Controller
+When you create a navigation interface, you need to decide how you intend to use a navigation interface. Because it imposes an overarching organization on your data, you should only use it in these specific ways:
+
+* Install it directly as a window’s root view controller.
+* Install it as the view controller of a tab in a tab bar interface.
+* Install it as one of the two root view controllers in a split view interface. (iPad only)
+* Present it modally from another view controller.
+* Display it from a popover. (iPad only)
+
+---
+
+## Container - Tab Bar Controller
+
+![inline](https://developer.apple.com/library/archive/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Art/tabbar_controllerviews.jpg)
+
+
+---
+## Container - Tab Bar Controller 
+
+![inline](https://developer.apple.com/library/archive/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Art/vc_tabbar_objects.jpg)
+
+---
+
+## Container - Tab Bar Controller 
+
+![inline](https://developer.apple.com/library/archive/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Art/tabbar_objects_2x.png)
 
 ---
 

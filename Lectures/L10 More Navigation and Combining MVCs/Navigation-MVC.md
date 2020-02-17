@@ -366,6 +366,9 @@ There is a notion of Container View Controllers that manage the multiple view co
 
 * You can also define your own custom container view controllers.  
 
+`https://github.com/SyracuseUniversity-CIS444/L10-SourceCode`
+
+[Download sample code](https://github.com/SyracuseUniversity-CIS444/L10-SourceCode)
 
 ---
 
@@ -863,4 +866,4 @@ let viewController = storyboard.instantiateViewControllerWithIdentifier("Identif
 ---
 
 
-[Download sample code](https://github.com/SyracuseUniversity-CIS444/CIS-444/tree/master/Lectures/L10%20More%20Navigation%20and%20Combining%20MVCs/Sample%20Code)
+[Download sample code](https://github.com/SyracuseUniversity-CIS444/L10-SourceCode)

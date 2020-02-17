@@ -1,6 +1,6 @@
 ## CIS-444
 ## Lecture 09
-### Handling Multitouch & Input Navigation
+### Gestures & Animations 
 
 ---
 # Today & Monday:

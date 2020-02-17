@@ -863,4 +863,4 @@ let viewController = storyboard.instantiateViewControllerWithIdentifier("Identif
 ---
 
 
-[Download sample code](https://github.com/jayliew/ContainerViewController/tree/master)
+[Download sample code](https://github.com/SyracuseUniversity-CIS444/CIS-444/tree/master/Lectures/L10%20More%20Navigation%20and%20Combining%20MVCs/Sample%20Code)

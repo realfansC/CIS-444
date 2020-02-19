@@ -128,9 +128,19 @@ Next, add a label (UILabel) at the top of the scene. A label isn’t interactive
 
 ### To add a button to your scene
 
+1. In the Object library, type button in the filter field to find the Button object quickly.
+2. Drag a Button object from the Object library to your scene.
+3. Drag the button so that it’s right below the text field and aligned with the left margin in the scene.
+   Stop dragging the button when it snaps to the guidelines.
+
 ![inline][AddButton]
 
 [AddButton]: https://media.giphy.com/media/KAvWjYWswGluZyB0ZC/giphy.gif
 
+4. Double-click the button and type Set Default Label Text.
+5. Press Return to display the new text in the button.
+6. Reposition the button, if necessary.
 
+![inline][SetDefaultText]
 
+[SetDefaultText]: https://i.imgur.com/62zxiFU.png

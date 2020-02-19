@@ -144,3 +144,125 @@ Next, add a label (UILabel) at the top of the scene. A label isn’t interactive
 ![inline][SetDefaultText]
 
 [SetDefaultText]: https://i.imgur.com/62zxiFU.png
+
+It’s good to understand how the elements you’ve added are actually arranged in the scene. Look at the outline view to see which user interface elements have been added to your scene.
+
+### To view the outline view
+
+1. In your storyboard, find the outline view toggle.
+
+![inline][OutlineView]
+
+[OutlineView]: https://i.imgur.com/pLOkKND.png
+
+
+2. If the toggle is collapsed, click the toggle to expand the outline view
+   You can use the outline view toggle to collapse and expand the outline view as needed.
+
+   The [outline view](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW56), which appears on the left side of the canvas, provides a hierarchical representation of the objects in    your storyboard. You should be able to see the text field, label, and button you just added listed in the hierarchy. But why are the user interface elements you added nested under View?  
+   
+   Views not only display themselves onscreen and react to user input, they can serve as containers for other views. Views are arranged in a hierarchical structure called the view hierarchy. The [view hierarchy](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW21) defines the layout of views relative to other views. Within that hierarchy, views enclosed within a view are called [subviews](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW22), and the parent view that encloses a view is called its [superview](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW67). A view can have multiple subviews and only one superview.
+
+![inline][Hierarchy]
+
+[Hierarchy]: https://i.imgur.com/TNitDOO.png
+
+  In general, each scene has its own view hierarchy. At the top of each view hierarchy is a content view. In the current scene, the content view is named View, the top level view inside the View Controller. The text field, label, and button are subviews of the content view. All other views that you place in this scene will be subviews of this content view (although they themselves can have nested subviews).
+
+
+## Preview Your Interface
+
+Preview your app periodically to check that everything is looking the way you expect. You can preview your app interface using the [assistant editor](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW76), which displays a secondary editor side-by-side with your main one.
+
+### To Preview Your Interface
+
+1. Select CaptionedViewController scene in the Storyboard
+2. Click the Assistant button in the Xcode toolbar near the top right corner of Xcode to open the assistant editor.
+
+![inline][PreviewAssistant]
+
+[PreviewAssistant]: https://media.giphy.com/media/M90vJMXrLBN39ARV4n/giphy.gif
+
+    As you see in the assistant editor, the preview looks almost identical to the canvas. However, this does not really tell you anything new. Both the canvas and the preview are showing the same size screen and the same orientation (portrait). If you want to check and see if your interface is adaptive, you need to preview different size screens and different orientations.
+    
+3. To preview the landscape orientation, select a device the bottom left hand corner of the preview panel and portrait and landscape representation should appear
+
+![inline][LandscapeFail]
+
+[LandscapeFail]: https://media.giphy.com/media/Pllp1rx1pRdnB8UVSq/giphy.gif
+
+Unfortunately, things no longer look quite right. The text field, label, and button keep the same size and position relative to the screen’s upper left corner. This means that the text field no longer fills the screen from margin to margin.
+
+4. To select a smaller device than the default selection like iPhone 4S
+
+![inline][Iphone4S]
+
+
+   Again, the text field, label, and button keep the same size and position relative to the screen’s upper left corner. This time, however, the text field extends past the screen’s right edge.
+
+[Iphone4S]: https://i.imgur.com/muFFn2H.png
+
+To create an adaptive interface, you’ll need to specify how the interface should adjust to different screen sizes. For example, when the interface is rotated into a landscape orientation, the text field should grow. When the interface is displayed on an iPhone 4S, the text field should shrink. You can specify these kinds of interface rules easily using Auto Layout.
+
+
+## Autolayout
+
+[Auto Layout](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW77) is a powerful layout engine that helps you design adaptive layouts that dynamically respond to any changes to the scene’s size. You describe your layout using [constraints](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW78)—rules that explain where one element should be located relative to another, or what size the element should be. Auto Layout dynamically calculates the size and position of each element based on these constraints.
+
+One of the easiest ways to define your layout is using a stack view (`UIStackView`). A stack view provides a streamlined interface for laying out a collection of views in either a column or a row. The stack view uses Auto Layout under the hood to calculate the size and position of all the views that it manages. This lets you easily access the full power of Auto Layout, while greatly reducing the complexity of your layout.
+
+To adopt Auto Layout, wrap your existing interface elements in a stack view, and then add the constraints needed to position the stack view in the scene.
+
+### To add Auto Layout constraints to the caption scene
+
+1. Return to the standard editor by clicking the Standard button.
+
+![inline][RegularEditor]
+
+[RegularEditor]: https://i.imgur.com/jt0Scq7.png
+
+2. Expand the project navigator and utility area by clicking the Editor Options and select Document Outline in the dropdown  
+
+3. While pressing the Shift key on your keyboard, select the text field, label, and button. Or select the elements in the Document outline (my preference)
+
+4. On the bottom right of the canvas, click the Embed In Stack button. (Alternatively, choose Editor > Embed In > Stack View.)
+
+![inline][EmbedStack]
+
+[EmbedStack]: https://media.giphy.com/media/fXcVghsuJteIwBMWbM/giphy.gif
+
+   Xcode wraps the user interface elements in a stack view, stacking them together. Xcode analyzes your existing layout to figure out that the items should stack vertically, not horizontally.
+   
+5. If necessary, open the outline view. Select the Stack View object.
+
+![inline][StackSelection]
+
+[StackSelection]: https://i.imgur.com/1pIwVx4.png
+
+6. In the Attributes inspector, type 10 in the Spacing field. Press Return.
+You’ll notice the user interface elements space out vertically, and the stack view grows with them.
+
+7. On the bottom right of the canvas, open the Add New Constraints menu.
+
+![inline][AddConstraints]
+[AddConstraints]: https://media.giphy.com/media/kEcpPsHpYxYXuGH9EF/giphy.gif
+
+8. Above “Spacing to nearest neighbor,” click the two horizontal constraints and the top vertical constraint to select them. They become red when they are selected.
+
+![inline][SelectConstraints]
+
+[SelectConstraints]: https://media.giphy.com/media/UQ1qvyNMFcIsMg69VR/giphy.gif
+
+These constraints indicate spacing to the nearest leading, trailing, and top neighbors. In this context, the term nearest neighbor means the boundary of the closest user interface element, which can be the superview, another user interface element, or a margin. Because the “Constrain to margins” checkbox is selected, the stack view in this case will be constrained to the superview’s left and right margins. This provides space between the stack view and the edge of the scene.
+On the other hand, the top of the stack is constrained relative to the scene’s top layout guide. The top layout guide is positioned at the bottom of the status bar, if the status bar is visible. If not, it is positioned at the top of the scene. Therefore, you need to add a little space between the stack view and the layout guide.
+
+9. Type 0 in the left and right boxes, and type 20 spacing in the top box.
+
+10. In the pop-up menu next to Update Frames, choose Items of New Constraints. This causes Interface Builder to automatically update the frames of the affected views when you create the constraints.
+
+![inline][AddConstraints]
+
+[AddConstraints]: https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/BBUI_AL_stackconstraints_2x.png
+
+
+

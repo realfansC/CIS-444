@@ -192,7 +192,7 @@ Leave the rest of the options as they are.
    ```swift
    @IBAction func setDefaultLabelText(_ sender: UIButton) {
     }
-```
+    ```
 
 8. The `sender` parameter refers to the object that was responsible for triggering the action—in this case, a button. The `IBAction` attribute indicates that the method is an action that you can connect to from your storyboard in Interface Builder. The rest of the declaration declares a method by the name of `setDefaultLabelText(_:)`.
 
@@ -200,5 +200,56 @@ Right now, the method declaration is empty. The code to reset the value of the l
 
 ## To implement the label reset action in the ViewController code
 
+In `CaptionedViewController.swift`, find the setDefaultLabelText action method you just added.
+In the method implementation, between the curly braces ({}), add this line of code:
 
+```swift
+captionValueLabel.text = "Default Text"
+```
+
+As you might guess, this code sets the label’s text property to string: "Default Text".
+Notice that you didn’t have to specify the type of Default Text, because Swift’s [type inference](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW70) can see that you’re assigning to something of type String and can infer the type correctly.
+
+iOS handles all of the redrawing code for you, so this is actually all the code you need to write for now. Your `setDefaultLabelText(_:)` action method should look like this:
+
+```swift
+@IBAction func setDefaultLabelText(_ sender: UIButton) {
+    captionValueLabel.text = "Default Text"
+}
+```
+
+Checkpoint: Test your changes by running the simulator. When you click the Set Default Label Text button, your setDefaultLabelText(_:) method is called, and the `captionValueLabel` object’s text value changes from `Caption` (the value set in your storyboard) to Default Text (the value set by the action). You should see the change in your user interface.
+
+![inline][ButtonWorkingProgress]
+
+[ButtonWorkingProgress]: https://media.giphy.com/media/QZ1DqtwWaaviYwQFPu/giphy.gif
+
+
+While changing the caption’s value to “Default Text” isn’t particularly useful, it does illustrate an important point. The behavior you just implemented is an example of the [target-action](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW68) pattern in iOS app design. Target-action is a design pattern where one object sends a message to another object when a specific event occurs.
+
+In this case:
+
+* The event is the user tapping the Set Default Text button.
+* The action is setDefaultLabelText(_).
+* The target is `CaptionedViewController` (where the action method is defined).
+* The sender is the Set Default Label Text button.
+
+The system sends the message by calling the action method on the target and passing in the sender object. The sender is usually a control—such as a button, slider, or switch—that can trigger an event in response to user interaction such as a tap, drag, or value change. This pattern is extremely common in iOS app programming, and you’ll be seeing much more of it throughout the lessons.
+
+## Process User Input
+
+At this point, users can reset the caption text to a default value, but you really want to let users enter their own caption values using the text field. To keep things simple, you’ll update the `captionValueLabel` object’s text value whenever the user enters text into the text field and taps Return.
+
+When you work with accepting user input from a text field, you need some help from a text field delegate. A [delegate](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW36) is an object that acts on behalf of, or in coordination with, another object. The delegating object—in this case, the text field—keeps a reference to the other object—the delegate—and at the appropriate time, the delegating object sends a message to the delegate. The message tells the delegate about an event that the delegating object is about to handle or has just handled. The delegate may respond by for example, updating the appearance or state of itself or of other objects in the app, or returning a value that affects how an impending event is handled.
+
+A text field’s delegate communicates with the text field while the user is editing the text, and knows when important events occur—such as when a user starts or stops editing text. The delegate can use this information to save or clear data at the right time, dismiss the keyboard, and so on.
+
+Any object can serve as a delegate for another object as long as it [conforms](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW32) to the appropriate [protocol](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW59). The protocol that defines a text field’s delegate is called `UITextFieldDelegate`. It is very common to make a view controller the delegate for objects that it manages. In this case, you’ll make your `CaptionedViewController` instance the text field’s delegate.
+
+First, `CaptionedViewController` needs to adopt the `UITextFieldDelegate` protocol. You adopt a protocol by listing it as part of the class declaration line.
+
+
+## To adopt the UITextFieldDelegate protocol
+
+1. If the assistant editor is open, return to the standard editor by clicking the Standard button.
 

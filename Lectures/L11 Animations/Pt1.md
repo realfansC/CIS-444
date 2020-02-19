@@ -265,4 +265,58 @@ On the other hand, the top of the stack is constrained relative to the scene’s
 [AddConstraints]: https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/BBUI_AL_stackconstraints_2x.png
 
 
+11. In the Add New Constraints menu, click the Add 3 Constraints button.
+
+![inline][StackWithConstraints]
+      The label, text field, and button are now left aligned and laid out with appropriate spacing, but the text field still isn’t stretching to fill the screen’s width. To fix that, you’ll need to add an additional constraint.
+
+
+[StackWithConstraints]: https://i.imgur.com/44Fwo9N.png
+
+### To adjust the text field width within the stack
+
+1. In your storyboard, select the text field in the Captioned View Controller scene.
+2. On the bottom right of the canvas, open the Add New Constraints menu again.
+
+![inline][AddNewConstraints]
+
+[AddNewConstraints]: https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/AL_pinmenu_2x.png
+
+3. Above “Spacing to nearest neighbor,” click the right horizontal constraint to select it. It becomes red when it is selected.
+
+4. Type 0 in the right box
+
+![inline][RightHorizontal]
+
+[RightHorizontal]: https://i.imgur.com/lfnIlw1.png
+
+5. In the Add New Constraints menu, click the Add 1 Constraint button.
+
+![inline][UpdatedTextfield]
+
+[UpdatedTextfield]: https://i.imgur.com/yADmjZX.png
+
+
+_Checkpoint: Run your app in iOS Simulator. Rotate the simulator by choosing Hardware > Rotate Left and Hardware > Rotate Right (or Command-Left Arrow and Command-Right Arrow). Notice how the text field grows and shrinks to the appropriate size depending on the device’s orientation and screen size. Also notice that the status bar disappears in landscape orientation._
+
+Click inside the text field and enter text using the onscreen keyboard (if you’d like, you can use your computer’s keyboard by choosing Hardware > Keyboard > Connect Hardware Keyboard).
+
+
+## Debugging Auto layout
+
+If you don’t get the behavior you expect, use the Auto Layout debugging features to help you. These features can be accessed using the Update Frames button and Resolve Auto Layout Issues menu.
+
+![inline][ResolveAutoLayout]
+
+[ResolveAutoLayout]: https://i.imgur.com/lXAcIvM.png
+
+If you are getting warnings about misplaced views, use the Update Frames button. This button updates the frames of the selected view and all of its subviews. Select the scene’s view controller to update all the views in the scene. You can also Option-click the Update Frames button to update only the selected view.
+
+If the layout does not behave as you expect, click the Resolve Auto Layout Issues button to bring up a menu of debug commands. All the commands in this menu have two forms. One affects the currently selected view. The other affects all views in the current view controller. If all of the commands are grayed out, select the scene’s view controller or one of the views and open the menu again.
+
+Choose Reset to Suggested Constraints to have Xcode update your interface with a valid set of constraints. Choose Clear Constraints to remove all constraints on the user interface elements, and then try following the previous instructions to set up the constraints again.
+
+![inline][ResetConstraints]
+
+[ResetConstraints]: https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/BBUI_AL_resolvemenu_small_2x.png
 

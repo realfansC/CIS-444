@@ -218,7 +218,7 @@ Now, you need to implement the functionality to change the image in this image v
 
 7. 
 
-![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L11%20Animations/gifs/PhotoImageView-gif.gif)
+![inline](PhotoImageViewOutlet)
 
 [PhotoImageViewOutlet]:https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L11%20Animations/gifs/PhotoImageView-gif.gif
 

@@ -203,20 +203,20 @@ Note: If you see the wrong scene in the preview, make sure to select the table v
 
 
 
-[added-table-view-controller-img]:added-table-view-controller
+[added-table-view-controller-img]:/resources/added-table-view-controller.png
 
-[table-view-controller-obj-img]:table-view-controller-obj
+[table-view-controller-obj-img]:/resources/table-view-controller-obj.png
 
-[initial-scene-table-img]: initial-scene-table
+[initial-scene-table-img]:/resources/initial-scene-tablepng
 
 [empty-table-controller-img]:https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/CTV_sim_emptytv_2x.png
 
-[table-view-in-navigator-img]: table-view-in-navigator
+[table-view-in-navigator-img]:/resources/table-view-in-navigator.png
 
 [empty-table-view-storyboard-img]: https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/CTV_singletvcell_2x.png
 
-[table-view-cell-storyboard-img]:table-view-cell-storyboard
+[table-view-cell-storyboard-img]:/resources/table-view-cell-storyboard.png
 
-[cook-program-as-cell-img]:cook-program-as-cell
+[cook-program-as-cell-img]:/resources/cook-program-as-cell.png
 
 [identity-inspector-img]:https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/inspector_identity_2x.png

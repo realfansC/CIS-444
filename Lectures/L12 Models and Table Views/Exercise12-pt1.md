@@ -437,7 +437,9 @@ Your `init` method should look something like this:
 ```
 
 
-✅point: Your app runs with the unit test you just wrote. All test cases should pass. Do not advance until `testCookProgramInitializationWithEmojiFails()` passes
+✅point: Your app runs with the unit test you just wrote. All test cases should pass. 
+
+🛑Do not advance until `testCookProgramInitializationWithEmojiFails()` passes. ***Raise your hand when you believe you have a working solution and I will review it before you proceed 🛑 
 
 Unit testing is an essential part of writing code because it helps you catch errors that you might otherwise overlook. As implied by their name, it’s important to keep unit tests modular. Each test should check for a specific, basic type of behavior. If you write unit tests that are long or complicated, it’ll be harder to track down exactly what’s going wrong.
 

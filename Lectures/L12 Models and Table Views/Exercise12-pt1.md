@@ -89,7 +89,7 @@ Now you’ll create a model to store the information that your scenes will use t
 The Group option defaults to your app name.
 In the Targets section, your app is selected and the tests for your app are unselected.
 6. Leave these defaults as they are, and click Create.
-Xcode creates a file called Meal.swift. In the Project navigator, drag the CookProgram.swift file and position it under the other Swift files, if necessary.
+Xcode creates a file called CookProgram.swift. In the Project navigator, drag the CookProgram.swift file and position it under the other Swift files, if necessary.
 
 In Swift, you can represent the CookProgram `name` using a `String`, the photo using a `UIImage`, the id as a `UUID`, and description as a `String`. Because a `CookProgram` always has a name and identifier but might not have a photo or a description, make the UIImage an optional.
 

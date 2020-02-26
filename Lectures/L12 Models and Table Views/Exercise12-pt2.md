@@ -9,12 +9,12 @@ In this lesson, you create a second, table view-based scene, that lists the cook
 
 At the end of the lesson, you’ll be able to:
 
-[x] Create a second storyboard scene
-[x] Understand the key components of a table view
-[x] Create and design a custom table view cell
-[x] Understand the roles of table view delegates and data sources
-[x] Use an array to store and work with data
-[x] Display dynamic data in a table view
+* [x] Create a second storyboard scene
+* [x] Understand the key components of a table view
+* [x] Create and design a custom table view cell
+* [x] Understand the roles of table view delegates and data sources
+* [x] Use an array to store and work with data
+* [x] Display dynamic data in a table view
 
 ## Create the Cook Program List
 
@@ -659,14 +659,15 @@ Eventually, our list of cook programs is going to grow, making it difficult for 
       /// assign your sorted cook programs array to your cook programs
     self.cookPrograms =  <your sorted array of cook programs>
 ```
+
 🛑❗️🛑❗️🛑❗️🛑❗️ Once you have a solution, raise your hand and I will give you the OK to proceed. Make sure you understand and can explain your solution.🛑❗️🛑❗️🛑❗️🛑❗️🛑❗️
 
-3. Run your app. And observe.
+3. Run your app. The list should display alphabetically. 
+
+![inline][sorted-cook-programs-table-view-img]
 
 
 
-
-🛑🛑🛑🛑🛑🛑🛑 Incomplete
 
 [added-table-view-controller-img]:resources/added-table-view-controller.png
 
@@ -695,3 +696,5 @@ Eventually, our list of cook programs is going to grow, making it difficult for 
 [inspector-cook-program-table-view-controller]:resources/Identity-Inspector-CookProgramTVC.png
 
 [cook-programs-table-view]:resources/cook-programs-table-view.png
+
+[sorted-cook-programs-table-view-img]:resources/sorted-cook-programs-table-view.png

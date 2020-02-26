@@ -308,7 +308,7 @@ Xcode creates `CookProgramTableViewController.swift` a source code file that def
 
 10. If necessary, in the Project navigator, drag the `CookProgramTableViewController.swift` file so that it’s positioned with the other Swift files.
 
-In this custom subclass, you can now define a property to store a list of Meal objects. The Swift standard library includes a structure called Array that works well for tracking lists of items.
+In this custom subclass, you can now define a property to store a list of CookProgram objects. The Swift standard library includes a structure called Array that works well for tracking lists of items.
 
 
 #### To load the initial data
@@ -613,7 +613,7 @@ Your `tableView(_:cellForRowAt:)` method should look like this:
     }
 ```
 
-The final step to displaying data in the user interface is to connect the code defined in `CookProgramTableViewCell.swift` to the meal list scene.
+The final step to displaying data in the user interface is to connect the code defined in `CookProgramTableViewCell.swift` to the cook program list scene.
 
 ### To point the Table View Controller to `CookProgramTableViewCell.swift`
 

@@ -19,7 +19,6 @@ At the end of the lesson, you’ll be able to:
 * [x] Create segues between view controllers
 * [x] Edit the attributes of a segue in a storyboard using the Attributes inspector
 * [x] Pass data between view controllers using the `prepare(for:sender:)` method
-* [x] Perform an unwind segue
 * [x] Use stack views to create robust, flexible layouts
 
 ## Setting up our details view
@@ -70,6 +69,29 @@ class CookProgramDetailsViewController: UIViewController {
 At this point, your `main.storyboard` should look like this:
 
 ![inline][lecture-13-navigation-progress-img]
+
+4.  👀 In the `CookProgramDetailsViewController` scene, make the `CookProgramDetailsViewController` scene look like this.:
+
+
+![inline][lecture-13-lecture-13-cook-program-details-layout-img]
+
+This is very similar to last week's exercise with some tweaks. Refer back to [Part 1](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L11%20Animations/Pt1.md) and [Part 2](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L11%20Animations/Pt2.md) and [Part 2](https://github.com/SyracuseUniversity-CIS444/Coding-Assigment-03/blob/master/Pt1-HW-03.md#to-add-auto-layout-constraints-to-the-caption-scene)
+do the following...
+* Add an image view to the scene (`cookProgramImageView`)
+* Drag an Image View object from the Object library to your scene the button.
+* Add  two labels below the image view
+* Emebed the image view, and 2 labels into a stack view
+* Set the stack view's  spacing field  to `10` (Need help? [Here.](https://github.com/SyracuseUniversity-CIS444/Coding-Assigment-03/blob/master/Pt1-HW-03.md#to-add-auto-layout-constraints-to-the-caption-scene))
+* Set the image view's `intrinsic content size` to `Placeholder` with values height: `320` and width: `320`
+* Ensure the label texts do not run off the screen 
+
+
+5. Create three outlets connecting the two labels and imageView in your scene to  `CookProgramDetailsViewController.swift`
+(Need help? [Here.](https://github.com/SyracuseUniversity-CIS444/Coding-Assigment-03/blob/master/Pt2-HW-03.md#create-outlets-for-ui-elements))
+
+After you're done you should have three outlets connected.
+
+![inline][lecture-13-outlet-scene-state-img]
 
 
 ## 👀 Add a Segue to Navigate Forward
@@ -126,10 +148,73 @@ We want to add the ability to create a new cook program from the list of cook pr
 1. 👀 Open the Object library. `+` sign in the toolbar or  Choose View > Show Library
 2. Drag a Bar Button Item object from the list to the far right of the navigation bar in the cook program list scene.
 
-![inline][lecture-13-lecture-13-bar-button-item-img]
+![inline][lecture-13-bar-button-item-img]
 
 A button called Item appears where you dragged the bar button item.
 
+![inline][lecture-13-add-bar-button-item-gif]
+
+3. Select the bar button item and open the Attributes inspector
+
+4. In the Attributes inspector, choose Add from the pop-up menu next to the System Item option.
+
+The button changes to an Add button (+).
+
+![inline][lecture-13-inspector-add-button-img]
+
+✅point: Run your app. The navigation bar should now have a title and display an Add button (+). The button doesn’t do anything yet.
+
+If you don't see a (+) sign, go to your `CookProgramTableViewController.swift` class and make sure 
+in the `viewDidLoad()` function,  `self.navigationItem.rightBarButtonItem = self.editButtonItem` is commented out or deleted.
+
+![inline][lecture-13-progress-02-img]
+
+
+## View details of Cook Program
+
+Right now our `CookProgram` object doesn't have much to show. Eventually a `CookProgram` we will have cook steps, videos, images, ingredients, equipment, etc. Far too much information to show in the list view. 
+
+When the user taps on a cook porgram in the list scene, you'll display the cook program in the detail scene. The user can then view the cook program details. modify, share with friends, etc. 
+
+Let's start by setting up the  `segues` between cook program list items and the cook program detail scene.
+
+### To configure the table view cell
+
+1. If the assistant editor is open, return to the standard editor by clicking the Standard button.
+
+2. Open your storyboard, `Main.storyboard`.
+
+3. On the canvas, select the table view cell in the cook program list (Cookbook) scene.
+
+3. Control-drag from the table view cell to the cook porgram  detail scene.
+
+4. A shortcut menu titled Selection Segue appears in the location where the drag ended.
+
+5. Choose Show from the Selection Segue menu. This causes the navigation controller to push the cook program detail scene onto the navigation controller’s stack.
+
+![inline][lecture-13-cell-details-segue-gif]
+
+6. On the canvas, select the newly added segue (the segue that runs directly from the cook program list (Cookbook) scene to the cook porgram detail scene).
+
+7. In the Attributes inspector, type `ShowDetail` in the Identifier field. Press Return.
+
+![inline][lecture-13-cell-details-segue-img]
+
+
+You use the identifier when referring to the segue in code.
+
+When the user taps a row in the cook program list, this segue is triggered. The segue pushes the view controller for the cook program detail scene onto the navigation stack that contains the cook program list scene. The app then animates the transition from the cook program list scene to the cook program detail scene.
+
+
+8. ✅point: Run your app. Tap on a cook program from the cook program  list. The app navigates to the cook program detail scene.
+
+![inline][lecture-13-navigation-detail-demo]
+
+Recall from earlier that the prepare(for:sender:) method is called before any segue gets executed. You can use this method to identify which segue is occurring, and display the appropriate information in the meal detail scene. You’ll differentiate the segues based on the identifiers you assign to them: AddItem when adding new meals and ShowDetail when editing an existing meal.
+
+
+
+. Recall from earlier your [2nd coding assignment](https://github.com/SyracuseUniversity-CIS444/Coding-Assignment-02#part-9-we-will-use-the-segue-we-created-in-step-8-to-pass-along-the-picture-we-created-in-landingviewcontroller-to-captionedviewcontroller)  `prepare(for:sender:)` method is called before any segue gets executed. You can use this method to identify which segue is occurring, and display the appropriate information in the cook program detail scene. You’ll differentiate the segues based on the identifiers you assign to them: `AddItem` when adding new cook program (we'll do this next week) and `ShowDetail` when viewing an existing cook program.
 
 
 
@@ -149,4 +234,20 @@ A button called Item appears where you dragged the bar button item.
 
 [lecture-13-navigation-bar-title-cookbook-img]:resources/lecture-13-navigation-bar-title-cookbook.png
 
-[lecture-13-lecture-13-bar-button-item-img]:resources/lecture-13-bar-button-item.png
+[lecture-13-bar-button-item-img]:resources/lecture-13-bar-button-item.png
+
+[lecture-13-add-bar-button-item-gif]:resources/lecture-13-add-bar-button-item.gif
+
+[lecture-13-inspector-add-button-img]:resources/lecture-13-inspector-add-button.png
+
+[lecture-13-progress-02-img]:resources/lecture-13-progress-02.png
+
+[lecture-13-cell-details-segue-gif]:resources/lecture-13-cell-details-segue.gif
+
+[lecture-13-cell-details-segue-img]:resources/lecture-13-show-detail-segue.png
+
+[lecture-13-navigation-detail-demo]:resources/lecture-13-navigation-detail-demo.gif
+
+[lecture-13-lecture-13-cook-program-details-layout-img]:resources/lecture-13-cook-program-details-layout.png
+
+[lecture-13-outlet-scene-state-img]:lecture-13-outlet-scene-state.png

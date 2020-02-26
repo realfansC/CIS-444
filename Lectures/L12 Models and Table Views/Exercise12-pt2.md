@@ -479,22 +479,22 @@ override func numberOfSections(in tableView: UITableView) -> Int {
 
 🛑🛑🛑🛑🛑🛑🛑 Incomplete
 
-[added-table-view-controller-img]:/resources/added-table-view-controller.png
+[added-table-view-controller-img]:resources/added-table-view-controller.png
 
-[table-view-controller-obj-img]:/resources/table-view-controller-obj.png
+[table-view-controller-obj-img]:resources/table-view-controller-obj.png
 
-[initial-scene-table-img]:/resources/initial-scene-tablepng
+[initial-scene-table-img]:resources/initial-scene-tablepng
 
 [empty-table-controller-img]:https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/CTV_sim_emptytv_2x.png
 
-[table-view-in-navigator-img]:/resources/table-view-in-navigator.png
+[table-view-in-navigator-img]:resources/table-view-in-navigator.png
 
 [empty-table-view-storyboard-img]: https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/CTV_singletvcell_2x.png
 
-[table-view-cell-storyboard-img]:/resources/table-view-cell-storyboard.png
+[table-view-cell-storyboard-img]:resources/table-view-cell-storyboard.png
 
-[cook-program-as-cell-img]:/resources/cook-program-as-cell.png
+[cook-program-as-cell-img]:resources/cook-program-as-cell.png
 
 [identity-inspector-img]:https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/inspector_identity_2x.png
 
-[preview-table-view-img]:/resources/preview-table-view.png
+[preview-table-view-img]:resources/preview-table-view.png

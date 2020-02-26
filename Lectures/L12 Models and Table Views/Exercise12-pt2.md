@@ -219,7 +219,7 @@ Open the project navigator and utility area by clicking the Navigator and Utilit
 2. In the project navigator, select `Assets.xcassets` to view the asset catalog.
 Recall that the asset catalog is a place to store and organize your image assets for an app.
 
-3. Double-click the folder name and rename it `Sample Images`.
+3. ~Double-click the folder name and rename it `Sample Images`.~
 
 4. With the folder selected, in the bottom left corner, click the plus (+) button and choose New Image Set from the pop-up menu.
 

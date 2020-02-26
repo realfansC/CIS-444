@@ -353,23 +353,23 @@ Make sure the names of the images in your project match the names you write in t
 
 6. After loading the images, create three cook program objects.
 
-```
-guard let cookProgram1 = CookProgram(name: "Roasted Asparagus", photo: photo1, description: nil) else {
-    fatalError("Unable to instantiate cookProgram1")
-}
- 
-guard let cookProgram2 = CookProgram(name: "Toasted Bagel", photo: photo2, description: nil) else {
-    fatalError("Unable to instantiate cookProgram2")
-}
- 
-guard let cookProgram3 = CookProgram(name: "Chocolate Brownies", photo: photo3, description: nil) else {
-    fatalError("Unable to instantiate cookProgram3")
-}
+```swift
+        guard let cookProgram1 = CookProgram(name: "Roasted Asparagus", photo: photo1, description: "Salty and savory, the roasting method kills the natural bitterness of asparagus. Try it next to grilled fish or lamb.") else {
+            fatalError("Unable to instantiate cookProgram1")
+        }
+         
+        guard let cookProgram2 = CookProgram(name: "Toasted Bagel", photo: photo2, description: "Creates a crust that's dense and chewy, but tender and easy to bite through.") else {
+            fatalError("Unable to instantiate cookProgram2")
+        }
+         
+        guard let cookProgram3 = CookProgram(name: "Chocolate Brownies", photo: photo3, description: "Perfect crisp crackly top, super fudgy centre, chewy or gooey in all the right places, studded with melted chunks of chocolate.") else {
+            fatalError("Unable to instantiate cookProgram3")
+        }
+        
+        guard let cookProgram4 = CookProgram(name: "Roasted Carrots", photo: photo4, description: "Buttery, tender carrots roasted with the best sauce!") else {
+                fatalError("Unable to instantiate cookProgram3")
 
-guard let cookProgram4 = CookProgram(name: "Roasted Carrots", photo: photo4, description: nil) else {
-        fatalError("Unable to instantiate cookProgram3")
-
-    }
+            }
 
 ```
 Because the `CookProgram`'s class’s initializer is failable, you need to check the result returned by the initializer. In this case, you are passing valid parameters, so the initializer should never fail. If the initializer does fail, you have a bug in your code. To help you identify and fix any bugs, if the initializer does fail, the fatalError() function prints the error message to the console and the app terminates.
@@ -379,6 +379,10 @@ Because the `CookProgram`'s class’s initializer is failable, you need to check
 ```swift
 cookPrograms += [cookProgram1, cookProgram2, cookProgram3, cookProgram4]
 ``` 
+
+🛑  `cookPrograms += [cookProgram1, cookProgram2, cookProgram3, cookProgram4]` is one approach to adding objects to an array. There are many other ways to accomplish this.
+✏️ Implement *a different* way to add `cookProgram1`, `cookProgram1`, `cookProgram2`, `cookProgram3`, `cookProgram4` to the `cookPrograms` array. [Apple Array Docs](https://developer.apple.com/documentation/swift/array)
+
 
 8. Find the `viewDidLoad()` method. The template implementation looks like this:
 
@@ -538,6 +542,10 @@ The `dequeueReusableCell(withIdentifier:for:)` method requests a cell from the t
 
 To make this code work for your app, you’ll need to change the identifier to the prototype cell identifier you set in the storyboard (`CookProgramTableViewCell`), and then add code to configure the cell.
 
+👉 Reminder: 👈
+![inline][cell-identifier-img]
+
+
 2. Add code at the beginning of the method, before the rest of the template implementation:
 
 ```swift
@@ -612,15 +620,48 @@ The final step to displaying data in the user interface is to connect the code d
 1. Open your storyboard.
 2. Select the table view controller by clicking on its scene dock until the entire scene has a blue outline around it.
 
+![inline][set-cell-class-img]
 
+3. Open the Identity inspector image: ![inline](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/inspector_identity_2x.png)
 
+4. In the Identity inspector, find the field labeled Class, and select `CookProgramTableViewController`.
 
+![inline][inspector-cook-program-table-view-controller]
 
-Reminder:
-[cell-identifier-img]:resources/cell-identifier.png
+✅point: Run your app. The list of items you added in the `viewDidLoad()` method should show up as cells in your table view. 
 
+![inline][cook-programs-table-view]
 
+## Sorting your Data
 
+### Discussion
+
+Currently, we display the list of cook programs based on the order in which we added them to our `cookPrograms` array: 
+In other words, 
+The `CookProgram` item at `cookPrograms`' index `0` is displayed first, 
+The `CookProgram` item at index `1` is displayed next, etc etc
+
+Eventually, our list of cook programs is going to grow, making it difficult for  a user to find a specific cook program. Let's help them out and display the cook programs alphabetically by a `CookProgram`'s name.
+
+### Sorting your data
+
+`CookProgram` is a custom object sorting it is a little different from sorting a list of strings.
+
+1. Review the Swift Documentation or google *how to sort an array of custom objects* (in this case `CookProgam`). Implement a way to sort and display our cook programs alphabetically.
+
+(There are several ways to do this.)
+
+2. Add your logic to sort `cookPrograms` to the last line in your `loadSampleCookPrograms()` 
+
+```swift
+    var unorderedCookPrograms = <original cook program array>
+      <add your sorted logic here>
+      /// assign your sorted cook programs array to your cook programs
+    self.cookPrograms =  <your sorted array of cook programs>
+```
+🛑❗️🛑❗️🛑❗️🛑❗️ Once you have a solution, raise your hand and I will give you the OK to proceed. Make sure you understand and can explain your solution.🛑❗️🛑❗️🛑❗️🛑❗️🛑❗️
+
+3. Run your app. And observe.
 
 
 
@@ -648,3 +689,9 @@ Reminder:
 [preview-table-view-img]:resources/preview-table-view.png
 
 [cell-identifier-img]:resources/cell-identifier.png
+
+[set-cell-class-img]:resources/set-cell-class.png
+
+[inspector-cook-program-table-view-controller]:resources/Identity-Inspector-CookProgramTVC.png
+
+[cook-programs-table-view]:resources/cook-programs-table-view.png

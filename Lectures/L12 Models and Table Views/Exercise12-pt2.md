@@ -139,6 +139,8 @@ The cell is nested under Table View Controller Scene > Table View Controller > T
 
 3. In the Attributes inspector, find the field labeled Identifier and type `CookProgramTableViewCell`. Press Return.
 
+![inline][cell-identifier-img]
+
 You will use this identifier to create instances of this prototype cell.
 
 
@@ -477,6 +479,152 @@ override func numberOfSections(in tableView: UITableView) -> Int {
 }
 ```
 
+2. Change the return value from 0 to 1, and remove the warning comment.
+
+```swift
+override func numberOfSections(in tableView: UITableView) -> Int {
+    return 1
+}
+```
+
+This code makes the table view show 1 section instead of 0. You removed the comment that says `#warning Incomplete implementation` because you’ve completed the implementation.
+
+The next data source method, `tableView(_:numberOfRowsInSection:)`, tells the table view how many rows to display in a given section. Your table view has only a single section, and each CookProgram object should have its own row. That means that the number of rows should be the number of CookProgram objects in your cookPrograms array.
+
+### To return the number of rows in your table view
+
+1. In `CookProgramTableViewController.swift`, find the `tableView(_:numberOfRowsInSection:)` data source method. The template implementation looks like this: 
+
+```swift
+override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    // #warning Incomplete implementation, return the number of rows
+    return 0
+}
+```
+
+You want to return the number of cook programs you have. Array has a property called `count` that returns the number of items in the array, so the number of rows is cookPrograms.count.
+
+2. Change the `tableView(_:numberOfRowsInSection:)` data source method to return the appropriate number of rows, and remove the warning comment.
+
+```swift
+override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return cookPrograms.count
+}
+```
+
+The last data source method, `tableView(_:cellForRowAt:)`, configures and provides a cell to display for a given row. Each row in a table view has one cell, and that cell determines the content that appears in that row and how that content is laid out.
+
+For table views with a small number of rows, all rows may be onscreen at once, so this method gets called for each row in your table. But table views with a large number of rows display only a small fraction of their total items at a given time. It’s most efficient for table views to ask for only the cells for rows that are being displayed, and that’s what `tableView(_:cellForRowAt:)` allows the table view to do.
+
+For any given row in the table view, you configure the cell by fetching the corresponding CookProgram in the cookPrograms array, and then setting the cell’s properties to corresponding values from the `CookProgram` class.
+
+### To configure and display cells in your table view
+
+1. In `CookProgramTableViewController.swift`, find and uncomment the `tableView(_:cellForRowAt:)` data source method. (To uncomment the method, remove the /* and */ characters surrounding it.)
+
+After you do that, the template implementation looks like this:
+
+```swift
+override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+    
+    // Configure the cell...
+    
+    return cell
+}
+```
+
+The `dequeueReusableCell(withIdentifier:for:)` method requests a cell from the table view. Instead of creating new cells and deleting old cells as the user scrolls, the table tries to reuse the cells when possible. If no cells are available, `dequeueReusableCell(withIdentifier:for:)` instantiates a new one; however, as cells scroll off the scene, they are reused. The identifier tells dequeueReusableCell(withIdentifier:for:) which type of cell it should create or reuse.
+
+To make this code work for your app, you’ll need to change the identifier to the prototype cell identifier you set in the storyboard (`CookProgramTableViewCell`), and then add code to configure the cell.
+
+2. Add code at the beginning of the method, before the rest of the template implementation:
+
+```swift
+// Table view cells are reused and should be dequeued using a cell identifier.
+let cellIdentifier = "CookProgramTableViewCell"
+```
+This creates a constant with the identifier you set in the storyboard.
+
+3. Update the template’s identifier to the `cellIdentifier` variable. The second line of code in the method should now look like this:
+
+```swift
+let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+```
+
+4. Because you created a custom cell class that you want to use, [downcast](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/GlossaryDefinitions.html#//apple_ref/doc/uid/TP40015214-CH12-SW87) the type of the cell to your custom cell subclass, `CookProgramTableViewCell`.
+
+```swift
+guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CookProgramTableViewCell  else {
+    fatalError("The dequeued cell is not an instance of CookProgramTableViewCell.")
+}
+```
+
+There’s a lot going on in this code:
+
+* The `as? CookProgramTableViewCell` expression attempts to downcast the returned object from the UITableViewCell class to your `CookProgramTableViewCell` class. This returns an optional.
+* The guard let expression safely unwraps the optional.
+* If your storyboard is set up correctly, and the `cellIdentifier` matches the identifier from your storyboard, then the downcast should never fail. If the downcast does fail, the `fatalError()` function prints an error message to the console and terminates the app.
+
+5. After the`guard` statement, add the following code:
+
+```swift
+// Fetches the appropriate cook program for the data source layout.
+let cookProgram = cookPrograms[indexPath.row]
+```
+
+This code fetches the appropriate cook program from the `cookPrograms` array.
+
+6. Now, use the cookProgram object to configure your cell. Replace the `// Configure the cell` comment with the following code:
+
+```swift
+cell.nameLabel.text = cookProgram.name
+cell.descriptionLabel.text = cookProgram.description
+cell.photoImageView.image = cookProgram.photo
+```
+
+This code sets each of the views in the table view cell to display the corresponding data from `cookProgram` object.
+
+Your `tableView(_:cellForRowAt:)` method should look like this:
+
+```swift
+ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "CookProgramTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CookProgramTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of CookProgramTableViewCell.")
+        }
+
+        // Fetches the appropriate cook program for the data source layout.
+        let cookProgram = cookPrograms[indexPath.row]
+        
+        cell.nameLabel.text = cookProgram.name
+        cell.descriptionLabel.text = cookProgram.description
+        cell.photoImageView.image = cookProgram.photo
+
+        return cell
+    }
+```
+
+The final step to displaying data in the user interface is to connect the code defined in `CookProgramTableViewCell.swift` to the meal list scene.
+
+### To point the Table View Controller to `CookProgramTableViewCell.swift`
+
+1. Open your storyboard.
+2. Select the table view controller by clicking on its scene dock until the entire scene has a blue outline around it.
+
+
+
+
+
+Reminder:
+[cell-identifier-img]:resources/cell-identifier.png
+
+
+
+
+
+
+
 🛑🛑🛑🛑🛑🛑🛑 Incomplete
 
 [added-table-view-controller-img]:resources/added-table-view-controller.png
@@ -498,3 +646,5 @@ override func numberOfSections(in tableView: UITableView) -> Int {
 [identity-inspector-img]:https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/inspector_identity_2x.png
 
 [preview-table-view-img]:resources/preview-table-view.png
+
+[cell-identifier-img]:resources/cell-identifier.png

@@ -668,12 +668,11 @@ Eventually, our list of cook programs is going to grow, making it difficult for 
 
 
 
-
 [added-table-view-controller-img]:resources/added-table-view-controller.png
 
 [table-view-controller-obj-img]:resources/table-view-controller-obj.png
 
-[initial-scene-table-img]:resources/initial-scene-tablepng
+[initial-scene-table-img]:resources/initial-scene-table.png
 
 [empty-table-controller-img]:https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Art/CTV_sim_emptytv_2x.png
 

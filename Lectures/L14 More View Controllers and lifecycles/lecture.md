@@ -330,7 +330,9 @@ class CookProgram: CustomStringConvertible, Equatable {
 The `Equatable` protocol requires you to provide an implementation for the `==` operator for your custom type.
 
 ```swift
-static func == (lhs: Self, rhs: Self) -> Bool
+<s>static func == (lhs: Self, rhs: Self) -> Bool</s>
+static func == (lhs: CookProgram, rhs: CookProgram) -> Bool 
+  
 ```
 
 Conforming to the protocol requires a static `==` function that takes lhs (left-hand side) and rhs (right-hand side) parameters and returns a Bool that says whether the two values are equal:

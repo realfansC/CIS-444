@@ -421,6 +421,8 @@ override func viewDidLoad() {
 
 [lecture-13-cell-details-segue-gif]:resources/lecture-13-cell-details-segue.gif
 
+
+ 
 [lecture-13-cell-details-segue-img]:resources/lecture-13-show-detail-segue.png
 
 [lecture-13-navigation-detail-demo]:resources/lecture-13-navigation-detail-demo.gif

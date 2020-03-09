@@ -3,7 +3,7 @@ March 9, 2020
 
 Do the following: 
 
-* [ ] Due Wednesday (3/11): [Project Planning Part 1](https://github.com/SyracuseUniversity-CIS444/Project-Planning-Part1) is due this Wednesday. Email it to me (rslatki@syr.edu)
+* [ ] Due Wednesday (3/11): [Project Planning Part 1](https://github.com/SyracuseUniversity-CIS444/Project-Planning-Part1) Email it to me (rslatki@syr.edu)
 
 * [ ] Due today: Setup Slack if you haven't done so already.
 

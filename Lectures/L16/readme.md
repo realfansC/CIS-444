@@ -5,9 +5,9 @@ Do the following:
 
 * [ ] Due Wednesday (3/11): [Project Planning Part 1](https://github.com/SyracuseUniversity-CIS444/Project-Planning-Part1) Email it to me (rslatki@syr.edu)
 
-* [ ] Due today: Setup Slack if you haven't done so already.
+* [ ] Due today: Setup Slack account if you haven't done so already.
 
-* [ ] Due today: Setup Slack on desktop, iOS or Android app. 
+* [ ] Due today: Install Slack app on desktop, iOS or Android app. 
 
 *  [ ]  Due Wednesday (3/11): [Project Planning Part 2](https://github.com/SyracuseUniversity-CIS444/Project-Planning-Part2)  Email it to me (rslatki@syr.edu)
 

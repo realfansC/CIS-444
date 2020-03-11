@@ -27,7 +27,7 @@ An enumeration, or enum, is a special Swift type that allows you to represent a 
 
 Imagine our user Noelle is going to a friend's house for a party. The host of the party asked Noelle to bring a dessert. She wants to use our app to bake something for the party. Pretend our app is wildly succesful and has thousands of reciepes. Noelle only really wants to see desserts. To do that, we will let our users filter recipes like this:
 
-![inline]()
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L17/resources/filter-mock.jpeg)
 
 But first we need to make some additions and modifications to our `CookProgram.swift` class.
 
@@ -108,11 +108,11 @@ Go to the origin of the compiler error:
 `CookProgramTableViewController.swift` instance method: `func loadSampleCookPrograms()` 
 
 
-Recall a few classes ago we used this method to instiante several `CookProgram` instances. Think carefully about what the error is saying related to the changes we just made to the `CookProgram` initalizer.
+Recall a few classes ago we used this method to instantiate several `CookProgram` instances. Think carefully about what the error is saying related to the changes we just made to the `CookProgram` initalizer:
 
 ``Missing argument for parameter 'mealType' in call``
 
-This makes sense. in `CookProgram.swift` we added a new parameter `mealType`  in the initailizer. However, we haven't set that value in our cook program instances.
+This sort of makes sense. A few steps ago in `CookProgram.swift` we added a new parameter `mealType`  in the initailizer. However, we haven't set that value in our cook program instance declarations.
 
 8. Add `mealType` parameter to our cook instance. After our `description` value  comma (`,`)  `mealType` colon `:` and the meal type for your `CookProgram` instance. 
 

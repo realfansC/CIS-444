@@ -21,7 +21,7 @@ An enumeration, or enum, is a special Swift type that allows you to represent a 
 
 #### Adding `mealType` property
 
-Imagine our user Noelle is going to a friend's house for a party. The host of the party asked Noelle to bring a dessert. She wants to use our app to bake something for the party. Pretend our app is wildly succesful and has thousands of reciepes. Noelle only really wants to see desserts. To do that, we will let our users filter recipes like this:
+Imagine our user Noelle is going to a friend's house for a party. The host of the party asked Noelle to bring a dessert. She wants to use our app to bake something for the party. Pretend our app is wildly succesful and has thousands of reciepes. Noelle only really wants to see desserts. To make it easier for her, we want to give her the ability to filter recipes like this:
 
 ![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L17/resources/filter-mock.jpeg)
 

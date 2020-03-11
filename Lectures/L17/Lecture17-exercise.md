@@ -1,15 +1,11 @@
 ## Lecture 17.0
 March 11, 2020
 
+* When you complete  the tasks in the following exercise, zip the project and email it to me: `RCSlatki@Syr.edu` Due: *Mon, March 23, 2020*
+
 ## Pre-read:
 * [Swift Docs: Enum](https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html)
 
-
-## Learning Objectives
-
-At the end of the lesson, you'll be able to:
-
-* Enumeration (Enum) defines a common type for a group of related values and enables you to work with those values in a type-safe way within your code.
 
 ## Enumerations
 As a programmer, you'll work with many situations that require you to assign values from a limited number of options. Imagine you're writing a program that allows passengers to select a seat from three options: window, middle, and aisle. In Swift, you'd do this with an enumeration.
@@ -328,4 +324,9 @@ Fix the rest of the cookProgram instances with `meal`  type passed in the initai
 
 ✏️ Below  our assignment of ordered array of cookPrograms: `self.cookPrograms = unorderedCookPrograms.sorted(by: >)`  use the `filter` method on `cookPrograms` to retrieve  all cookprograms of `mealType` `.dessert`
 
-✏️ Create a new enum: `SkillLevel` with 
+✏️ Create a new enum: `SkillLevel` with values `easy`, `medium` `simple` `difficult`
+✏️ In `CookProgram` add a new `skillLevel` constant.
+✏️ Update your `CookProgram` initalizer to include a  `skillLevel`
+✏️ Update your `CookProgram` instances with a skillLevel. Your project should compile.
+
+✏️When your project compiles, zip your  Xcode project to `RCSlatki@syr.edu`

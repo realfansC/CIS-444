@@ -2,7 +2,7 @@
 ## Lecture-18
  
 
-### Swift Playgrounds. Our new virtual format requires a new way to evaulate progress in this course so far. The quiz I designed uses Swift Playgrounds. Outside of quizzes we will not use playgrounds. Today's lecture is focused playground basics and give you the opportunity to begin work on [Project Planning Part 3](https://github.com/SyracuseUniversity-CIS444/Project-Planning-Part-3)  and [Quiz](https://github.com/SyracuseUniversity-CIS444/Quiz-1)
+### Swift Playgrounds. Our new virtual format requires a new way to evaulate progress in this course so far. The quiz I designed uses Swift Playgrounds. Outside of quizzes we will not use playgrounds. Today's lecture is focused on swift playground basics and give you the opportunity to begin work on [Project Planning Part 3](https://github.com/SyracuseUniversity-CIS444/Project-Planning-Part-3)  and [Quiz](https://github.com/SyracuseUniversity-CIS444/Quiz-1)
 
 
 ### Lecture 18 to do list:

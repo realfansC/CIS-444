@@ -2,7 +2,7 @@
  Lecture 19
  March 25, 2020
 
-
+[] ✏️ When you're done, submit the exercise to `RCSlatki@syr.edu` by April 30, 2020
 
 ### Tab View Controller 
 
@@ -33,7 +33,7 @@ To practice building a tab bar interface, you'll create a simple app that naviga
 
 6. Create the tab bar controller. With the red view selected, choose Editor > Embed In > Tab Bar Controller from the Xcode menu bar.
 
-![inline](background-red.png)
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/background-red.png)
 
 This action places a tab bar controller at the beginning of the scene. 
 
@@ -41,7 +41,7 @@ The tab bar controller maintains a list of tabs through its `viewControllers` pr
 
 That last step added the red view controller to the tab bar controller's array of root view controllers. For each root view controller, there's an associated  `UITabBarItem` instance. You now have a tab bar with one tab bar item.
 
-![inline](embed-tab.png)
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/embed-tab.png)
 
 ### Add a tab item
 
@@ -51,11 +51,11 @@ To add another tab bar item
 3. Give the view controller an orange background. 
 4. Add the new view controller into the viewControllers array. Control-drag from the tab bar controller to the orange view controller, and release the mouse or trackpad button. In the popover, you can see "view controllers" listed under Relationship Segue. Choose this option.
 
-![inline](viewcontrollers-array.png)
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/viewcontrollers-array.png)
 
 You should now see a second tab bar item on the tab bar controller. 
 
-![inline](orange-view.png)
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/orange-view.png)
 
 5. Build and run your app. Notice that you can switch between the two view controllers by selecting a different tab bar item.”
 
@@ -63,7 +63,7 @@ You should now see a second tab bar item on the tab bar controller.
 
 A tab bar item consists of two visual elements: an image and a label. The iOS SDK provides several iOS-style icons paired with system-defined text, referred to as system items. You can see a few of them on the App Store tab bar.
  
-![inline](tab-bar-item-stock.png)
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/tab-bar-item-stock.png)
 
 In your RainbowTabs project, select the tab bar item in the red view controller, and open the Attributes inspector. Choose any of the system items from the System Item pop-up menu. Notice how the tab bar item adjusts to your different selections.
 
@@ -80,15 +80,15 @@ But maybe the system items don't make sense for your app. You can use the Attrib
 
 Make sure that you've added the PDF vector images from dropbox folder (download [here](https://www.dropbox.com/sh/r823hfpzv0xa16f/AABf2FKFmvTPi-nZs9NVN8cDa?dl=0) into the project's `Assets.xcassets` directory.) If you want, you can also customize the Selected Image attribute to distinguish the tab item's selected state.
 
-![inline](bar-item-R.png)
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/bar-item-R.png)
 
 4. Make changes to the tab bar item for the orange view controller.
 
-![inline](bar-item-O.png)
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/bar-item-O.png)
 
 5. If you want your tab bar item to indicate that new information is available for that view or mode, you can add a small red marker with white text, known as a badge, to the tab bar item. Use the Badge attribute to enter information.
 
-![inline](bar-item-badge.png)
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/bar-item-badge.png)
 
 ### Programmatic Customization
 Storyboards are ideal for setting up initial, or default, view scenes; but they don't allow you to make runtime adjustments using the Attributes inspector. 
@@ -128,18 +128,18 @@ You've probably noticed that the current version of your project doesn't live up
 
 If you find it helpful, you can reposition the view controllers on the canvas to match the order on the tab bar.
 
-![inline](rainbow-tabs.png)
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/rainbow-tabs.png)
 
 
 4. Add each of these view controllers to the viewControllers property of the tab bar controller.
 
-![inline](rainbow-array.png)
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/rainbow-array.png)
 
 Feel free to update the new tab bar items with images from the Assets Catalog. 
 
 Run your app in Simulator on an iPhone device. With five items on the tab bar, there isn't much space left. _What do you think will happen if you add a final purple view controller to the tab bar controller?_
 
-![inline](yellow.png)
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/yellow.png)
 
 
 5. Drag another view controller onto the canvas
@@ -150,11 +150,11 @@ Run your app in Simulator on an iPhone device. With five items on the tab bar, t
 
 You'll notice, in your tab bar controller scene, the fifth tab is replaced with a More tab item.
 
-![inline](more-storyboard.png)
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/more-storyboard.png)
 
 8. Run the app on the simulatlor. What just happened? 
 
-![inline](more-simulator.png)
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/more-simulator.png)
 
 Whenever you add more view controllers than the tab bar can display, the tab bar controller inserts a special view controller, known as the More view controller. This view controller lists the omitted view controllers in a table, which can expand to accommodate any number of items.
 
@@ -180,11 +180,11 @@ class RedViewController : UIViewController {
 }
 ```
 
-![inline](redviewcontroller.png)
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/redviewcontroller.png)
 
 3. 👀 You'll need to update the red view's controller class from ViewController to RedViewController as well, since the ViewController class no longer exists. Highlight the red view's controller in the Document Outline, then use the Identity inspector to set the custom class to the new name.
 
-![inline](rename-class.png)
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/rename-class.png)
 
 Now you're ready to add new view controllers to your project. 
 
@@ -194,7 +194,7 @@ Now you're ready to add new view controllers to your project.
 4. then give your class a new name, `OrangeViewController`. (It is convention to append "ViewController" to the end of your class name so it's clear what type of object you're subclassing.)
 5. Click Next, then Create, to finalize the subclass creation.
 
-![inline](Orange-view-controller.png)
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/Orange-view-controller.png)
 
 Now that you have a new view controller to work with, you can update the controller of the orange view to `OrangeViewController`. 
 
@@ -214,20 +214,4 @@ Each navigation controller's root view controller should be one of the colored v
 
 [viewcontrollersprop]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITabBarController_Class/#//apple_ref/occ/instp/UITabBarController/viewControllers
 [uitabbarcontroller]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITabBarController_Class/
-
-
-
-
-
-### Due and submitted to me by end of class (`rcslatki@syr.edu`):
-* [ ] 
-* [ ] Create an app that displays distinct types of information about yourself in separate tabs.
-
-#### Example:
-
-![inline 50%](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/L19-Home.png)
-
-![inline 50%](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/L19-Family.png)
-
-![inline 50%](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/L19-Hobbies.png)
 

@@ -6,7 +6,7 @@
 
 ### Tab View Controller 
 
-### Ovreview
+### Overview
 A tab bar controller allows you to arrange your app according to distinct modes or sections. For example, the Clock app is divided into five modes: World Clock, Alarm, Bedtime, Stopwatch, and Timer.
 
 ![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/alarm-app.png)

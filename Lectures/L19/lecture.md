@@ -25,7 +25,7 @@ They can be used to allow the user to navigate between entirely different parts 
 ### Add a tab bar controller
 To practice building a tab bar interface, you'll create a simple app that navigates between several root view controllers. (This could be a good template for future projects that also use a tab bar controller.)
 1. Create a new project called "RainbowTabs" using the Single View Application template.
-2. Download  the PDF files [here]() 
+2. Download  the PDF files [here](https://www.dropbox.com/sh/r823hfpzv0xa16f/AABf2FKFmvTPi-nZs9NVN8cDa?dl=0) 
 3. Drag the assets into  the project's Assets.xcassets folder (The PDF's use vector-based images, which look great at any resolution). 
 4.  Open Main.storyboard and
 5. in the document outline, select View under View Controller. Using the Attributes inspector, set the view's background color to red.

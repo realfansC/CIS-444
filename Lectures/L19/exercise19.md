@@ -2,7 +2,7 @@
  Lecture 19
  March 25, 2020
 
-*Due: Emailed to me RCSlatki@syr.edu by April 30, 2020*
+*Due: Emailed to me RCSlatki@syr.edu by March 30, 2020*
 
 
 ## Tab View Controller Assignment

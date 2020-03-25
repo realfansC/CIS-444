@@ -39,4 +39,4 @@ The objective of this assignment is to use a tab bar controller to display diffe
 
 ### Step 3: Submit
 
-* Email me your project to `RCSlatki@syr.edu` by March 30, 2020
+* Email your project to `RCSlatki@syr.edu` by March 30, 2020

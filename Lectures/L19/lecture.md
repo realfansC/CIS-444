@@ -10,7 +10,9 @@
 
 #### Example:
 
-![inline]()
-![inline]()
-![inline()]
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/L19-Home.png)
+
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/L19-Family.png)
+
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/L19-Hobbies.png)
 

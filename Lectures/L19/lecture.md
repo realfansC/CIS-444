@@ -2,7 +2,6 @@
  Lecture 19
  March 25, 2020
 
-[] ✏️ When you're done, submit the exercise to `RCSlatki@syr.edu` by April 30, 2020
 
 ### Tab View Controller 
 
@@ -209,7 +208,9 @@ Now that you have a new view controller to work with, you can update the control
 Each navigation controller's root view controller should be one of the colored view controllers. 
 
 
-[] ✏️ When you're done, submit your project to `RCSlatki@syr.edu` by April 30, 2020
+* [ ] ✏️ When you're done, submit your rainbow project to `RCSlatki@syr.edu` by April 30, 2020
+
+* [ ] ✏️ Proceed to [Exercise19](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/exercise19.md)
 
 
 [viewcontrollersprop]: https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITabBarController_Class/#//apple_ref/occ/instp/UITabBarController/viewControllers

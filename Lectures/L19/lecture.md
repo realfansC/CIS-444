@@ -67,7 +67,7 @@ A tab bar item consists of two visual elements: an image and a label. The iOS SD
 
 In your RainbowTabs project, select the tab bar item in the red view controller, and open the Attributes inspector. Choose any of the system items from the System Item pop-up menu. Notice how the tab bar item adjusts to your different selections.
 
-![inline](device-orientation.png)
+![inline](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L19/Screenshots/device-orientation.png)
 
 ### Customize Tab Bar ITems
 

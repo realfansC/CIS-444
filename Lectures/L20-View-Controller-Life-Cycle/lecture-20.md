@@ -66,10 +66,10 @@ Some units of work may only be performed one time—for example, updating a labe
 For work that will be performed multiple times, your app can rely on view event notifications. When the visibility of its views changes, a view controller will automatically call its life cycle methods—allowing you to respond to the change in view state.
 
 These methods include:
-* `viewWillAppear(_:)`
-* `viewDidAppear(_:)`
-* `viewWillDisappear(_:)`
-* `viewDidDisappear(_:)`
+* [`viewWillAppear(_:)`](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621510-viewwillappear)
+* [`viewDidAppear(_:)`](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621423-viewdidappear)
+* [`viewWillDisappear(_:)`](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621485-viewwilldisappear)
+* [`viewDidDisappear(_:)`](https://developer.apple.com/documentation/uikit/uiviewcontroller/1621477-viewdiddisappear)
 
 Take a look at the documentation. You may notice that each of these methods requires you to call the superclass' version at some point in your implementation. 
 
@@ -149,9 +149,60 @@ For your view to disappear, you'll need to add a second view controller. Otherwi
 
 ![inline](resources/Life-Cycle-New-Controller.png)
 
-5. “Add the new file to the LifeCycle folder.”
+5. Add the new file to the LifeCycle folder.
 
-Excerpt From: Apple Education. “App Development with Swift.” Apple Inc. - Education, 2019. Apple Books. https://books.apple.com/us/book/app-development-with-swift/id1465002990 
+![inline](resources/LifeCycle-New-File.png)
+
+6. Tell the storyboard the identity of your new view controller. Go back to `Main.storyboard` and select the second view controller. Open the Identity inspector and update the Class to `SecondViewController`. Make sure to press Return to confirm this change.
+
+![inline](resources/Change-Identity.png)
+
+### Second View Controller Lifecycle
+
+To see how iOS transitions between the view controllers, you'll use the life cycle methods of `SecondViewController` as well. 
+
+1. Go back to your `SecondViewController` class file
+2. Add the same 5 life cycle methods that you have in `ViewController`. 
+Don't forget to call the super implementation. 
+
+3. Add print statements to each event. 
+Consider something like this: "SecondViewController - View Did Load.”
+
+4. Build and run your app. 
+Without clicking anything, you should see that the `ViewController` instance has loaded and both appear methods have been called.
+
+But why don't you see any prints from `SecondViewController`? The storyboard initialized the `SecondViewController`, so what's happening? Why hasn't the view loaded? The view controller won't load its view until the view needs to be displayed to the user. And that's a good thing. By delaying the loading, the app is conserving memory—which is a limited resource in a mobile environment.
+
+To load the `SecondViewController` instance, return to Simulator and click the tab for the second view controller. At this point, you should see the following print statements in this order:
+
+ViewController - View Did Load
+ViewController - View Will Appear
+ViewController - View Did Appear
+SecondViewController - View Did Load
+SecondViewController - View Will Appear
+ViewController - View Will Disappear
+ViewController - View Did Disappear
+SecondViewController - View Did Appear
+Switching back to the first tab, the order of the print statements is:
+FirstViewController - View Will Appear
+SecondViewController - View Will Disappear
+SecondViewController - View Did Disappear
+FirstViewController - View Did Appear
+
+
+The order in which these functions are called helps to explain how view controller's views are added and removed from the view hierarchy:
+* If a view controller's view is to be added to the hierarchy, UIKit first ensures that the view has been loaded. If not, it loads the view and triggers `viewDidLoad()`.
+* Before adding the view controller's view to the hierarchy, UIKit triggers `viewWillAppear(_:)`.
+* View controller views that will no longer be displayed are then removed, and those view controller's `viewWillDisappear(_:)` and `viewDidDisappear(_:)` methods are called.
+* Finally, UIKit displays the new view and triggers `viewDidAppear(_:)`.
+
+As you can see, there are many uses for the view controller life cycle methods. Each one is like a "notification" telling your code that the view event has taken place. Using this guide, you, as the developer, will figure out how best to take advantage of each of the methods for the particular task at hand.
+
+### Extra Credit:
+For an additional 5 points on Quiz:
+Draw the state diagram from memory.
+
+
 
 ### Additional Resources:
 * View Controller Programming Guide for iOS

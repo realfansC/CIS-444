@@ -1,6 +1,6 @@
 ## CIS-444 Code Assignment 
-✏️ Complete Guided Lecture-20 
-✏️Submit this exercise to me: RCSlatki@syr.edu by April 6, 2020
+✏️ Complete and submit [Guided Lecture-20](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L20-View-Controller-Life-Cycle/lecture-20.md)
+✏️Complete and submit the following exercise to me: RCSlatki@syr.edu by April 6, 2020
 
 ![inline](resources/Lab-1.png)
 

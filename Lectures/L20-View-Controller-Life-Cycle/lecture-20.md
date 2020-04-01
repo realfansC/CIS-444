@@ -149,6 +149,10 @@ For your view to disappear, you'll need to add a second view controller. Otherwi
 
 ![inline](resources/Life-Cycle-New-Controller.png)
 
+5. “Add the new file to the LifeCycle folder.”
+
+Excerpt From: Apple Education. “App Development with Swift.” Apple Inc. - Education, 2019. Apple Books. https://books.apple.com/us/book/app-development-with-swift/id1465002990 
+
 ### Additional Resources:
 * View Controller Programming Guide for iOS
 * API Reference: UIViewController

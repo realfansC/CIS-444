@@ -80,7 +80,7 @@ However, since you don't know the implementation of `UIViewController`'s life cy
 Generally, the call to the superclass' implementation will be the first line of your overridden method.
 
 ```swift
-“override func viewWillAppear(_ animated: Bool) {
+override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     // Add your code here
 }
@@ -97,7 +97,7 @@ Use the `viewDidAppear(_:)` method for starting an animation or for other long-r
 1. To continue exploring the life cycle, override the function `viewWillAppear(_:)`.
 
 ```swift
-“override func viewWillAppear(_ animated: Bool) {
+override func viewWillAppear(_ animated: Bool) {
  
 }
 ```
@@ -113,7 +113,7 @@ override func viewWillAppear(_ animated: Bool) {
 3. Next, add a print statement so you can check the order of the life cycle methods:
 
 ```swift
-“print("ViewController - View Will Appear")
+print("ViewController - View Will Appear")
 ```
 4. A similar print statement to `viewDidAppear(_:)`
 
@@ -121,7 +121,7 @@ override func viewWillAppear(_ animated: Bool) {
 
 You should see three statements printed in your console. Refer to the view controller state diagram above, and see if you can trace the view's transitions:
 
-![inline](Controller-Transitions.png)
+![inline](resources/Controller-Transitions.png)
 
 #### View Will Disappear and View Did Disappear
 You've probably already guessed that `viewWillDisappear(_:)` is called before the view disappears from the screen. This method executes when the user navigates away from the screen by tapping the back button, switching tabs, or presenting or dismissing a modal screen. *You can use the `viewWillDisappear(_:)` method for saving edits, hiding the keyboard, or canceling network requests.*
@@ -145,7 +145,7 @@ For your view to disappear, you'll need to add a second view controller. Otherwi
 
 ![inline](resources/LifeCycle-New-Cocoa.png)
 
-4. “Name the new class "SecondViewController" and make sure the Subclass field is set to `UIViewController`.
+4. Name the new class "SecondViewController" and make sure the Subclass field is set to `UIViewController`.
 
 ![inline](resources/Life-Cycle-New-Controller.png)
 
@@ -198,6 +198,8 @@ The order in which these functions are called helps to explain how view controll
 
 As you can see, there are many uses for the view controller life cycle methods. Each one is like a "notification" telling your code that the view event has taken place. Using this guide, you, as the developer, will figure out how best to take advantage of each of the methods for the particular task at hand.
 
+✏️Submit this exercise to me: RCSlatki@syr.edu by April 6, 2020
+
 ### Extra Credit:
 For an additional 5 points on Quiz:
 Draw the state diagram from memory.
@@ -205,5 +207,5 @@ Draw the state diagram from memory.
 
 
 ### Additional Resources:
-* View Controller Programming Guide for iOS
-* API Reference: UIViewController
+* [View Controller Programming Guide for iOS](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/index.html)
+* [API Reference: UIViewController](https://developer.apple.com/documentation/uikit/uiviewcontroller)

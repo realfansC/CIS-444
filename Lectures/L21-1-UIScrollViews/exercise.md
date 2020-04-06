@@ -10,4 +10,4 @@ Lecture-21: HW Exercise
 
 
 Great work! You've made an app that can scroll and zoom in on an image. 
-✏️Can you think of something you want to build where this functionality might be useful? (include your answer in your  submission)
+* ✏️ Can you think of something you want to build where this functionality might be useful? (include your answer in your  submission)

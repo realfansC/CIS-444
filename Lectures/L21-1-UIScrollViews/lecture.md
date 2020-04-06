@@ -44,3 +44,6 @@ Lecture-21: Guided Lecture
 ![inline](resources/lecture-21-36.png)
 ![inline](resources/lecture-21-37.png)
 ![inline](resources/lecture-21-38.png)
+
+✏️ Submit your guided lecture to RCSlatkin@syr.edu
+✏️ Next: complete [Exercise-21](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L21-1-UIScrollViews/exercise.md)

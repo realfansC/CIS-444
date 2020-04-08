@@ -28,3 +28,6 @@
 ![inline](resources/l22-22.png)
 ![inline](resources/l22-23.png)
 ![inline](resources/l22-24.png)
+
+
+* Next: Complete [Exercise-22](https://github.com/SyracuseUniversity-CIS444/CIS-444/blob/master/Lectures/L22-Table-Views/exercise.md)

@@ -2,7 +2,7 @@
 ### Guided Lecture Part 1: Table Views - Basic
 
 * This is a review of Table Views
-* ✏️ Complete and submit to me by *end of class*  `RCSlatki@syr.edu` (late assignments accepted until April 13, 2020)
+* ✏️ Complete and submit to  `RCSlatki@syr.edu` ( assignments accepted until `April 13, 2020`)
 
 ![inline](resources/l22-1.png)
 ![inline](resources/l22-2.png)
@@ -28,5 +28,3 @@
 ![inline](resources/l22-22.png)
 ![inline](resources/l22-23.png)
 ![inline](resources/l22-24.png)
-![inline](resources/exercise22-1.png)
-![inline](resources/exercise22-2.png)

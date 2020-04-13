@@ -38,5 +38,5 @@ In the previous lesson, you learned how to build basic table views. While the st
 ![inline](resources/L23-18.png)
 ![inline](resources/L23-19.png)
 ![inline](resources/L23-20.png)
-![inline](resources/EL2323-21.png)
+![inline](resources/L23-21.png)
 

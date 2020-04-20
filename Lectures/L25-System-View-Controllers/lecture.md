@@ -30,4 +30,4 @@ In this lesson, you'll learn how to incorporate these system view controllers fo
 ![inline](resources/L25-14.png)
 ![inline](resources/L25-15.png)
 ![inline](resources/L25-16.png)
-![inline](resources/L25-14.png)
+![inline](resources/L25-17.png)

@@ -31,7 +31,7 @@ In this lesson, you'll learn how to combine multiple controls and views to build
 ![inline](resources/L26-12.png)
 ![inline](resources/L26-13.png)
 ![inline](resources/L26-14.png)
-![inline](resources/L26-15.png)
+![inline](resources/L26-15.gif)
 ![inline](resources/L26-16.png)
 ![inline](resources/L26-17.png)
 ![inline](resources/L26-18.png)

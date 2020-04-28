@@ -42,7 +42,7 @@ In this lesson, you'll learn how to combine multiple controls and views to build
 ![inline](resources/L26-23.png)
 ![inline](resources/L26-24.png)
 ![inline](resources/L26-25.png)
-![inline](resources/L26-26.gif)
+![inline](resources/L26-26.png)
 ![inline](resources/L26-27.png)
 ![inline](resources/L26-28.png)
 ![inline](resources/L26-29.png)
